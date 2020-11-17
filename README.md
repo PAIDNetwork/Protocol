@@ -1,4 +1,4 @@
-# PAID Protocol (DID_DPKI Proposal v1)
+# PAID Protocol (DID-DPKI Proposal v1)
 
 ## Chapter 1 - Verifiable credentials, attestations, proof, quorum signatures and oraclized data feeds
 
