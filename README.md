@@ -44,7 +44,7 @@ a required renewal date (will be represented in epoch time in OrgIDVerifier.sol 
 
  #### **JSON Schema**
 
- A JSON Schema construct, Has the full JSON schema specs, which includes extensions using other schemas with a Verifiable Credentials and compatible Decentralized Identity DID compatible
+ A JSON Schema construct, Has the full JSON schema specs, which includes extensions using other schemas with a Verifiable Credentials and compatible `Decentralized Identity DID compatible (W3C)`
  
  #### **P384 or secp256r1**
  
@@ -73,7 +73,7 @@ a required renewal date (will be represented in epoch time in OrgIDVerifier.sol 
  
  Using an existing KYC provider Proof of Address service, create a Chainlink oracle that handles any KYC related actions. In this special case, because of cost, any proof of address validation must be accounted in the transaction and billed depending on token being used.
 
- #### **Proof of epassport** *How two-step authentication*
+ #### **Proof of epassport** *(How two-step authentication)*
 
 A biometric passport (also known as an e-passport, ePassport, or a digital passport) is a traditional passport that has an embedded electronic microprocessor chip which contains biometric information that can be used to authenticate the identity of the passport holder. It uses contactless smart card technology, including a microprocessor chip (computer chip) and antenna (for both power to the chip and communication) embedded in the front or back cover, or centre page, of the passport.
  
