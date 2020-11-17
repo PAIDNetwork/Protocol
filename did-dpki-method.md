@@ -1,14 +1,11 @@
-## did-dpki
+ ## did-dpki
 
-### A did method to verify identity and residence using pluggable authentication sources
+ ### A did method to verify identity and residence using pluggable authentication sources
 
 
-### Why did-dpki
+ ### Why did-dpki
 
-PAID Smart Agreements need verifiable proof of identity to work well with legal contracts. Legal contracts, because they are binding, need a way
-to ensure all parties are accountable under a jurisdiction. In a simple legal agreement workflow, a KYC solution might be enough. But considering PAID
- is a decentralized based protocol, using smart contracts and oracles, we'll need a good set of technology stack that supports enough data sources and still
- keep the level of decentralization required.
+ PAID Smart Agreements need verifiable proof of identity to work well with legal contracts. Legal contracts, because they are binding, need a way to ensure all parties are accountable under a jurisdiction. In a simple legal agreement workflow, a KYC solution might be enough. But considering PAID is a decentralized based protocol, using smart contracts and oracles, we'll need a good set of technology stack that supports  enough data sources and still keep the level of decentralization required.
  
  ### Proposal
  
@@ -87,6 +84,7 @@ A biometric passport (also known as an e-passport, ePassport, or a digital passp
  - [Decentralized Identifiers (DIDs) v1.0](https://www.w3.org/TR/did-core/)
  - [JSON Web Token (JWT) RFC7519](https://tools.ietf.org/html/rfc7519)
  - [Ecdsa Secp256k1 Recovery Signature 2020](https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/)
+ - [Edwards-Curve Digital Signature Algorithm (EdDSA)](https://tools.ietf.org/html/rfc8032)
  - [DID Specification Registries](https://w3c.github.io/did-spec-registries/)
  - [Delaware Limited Liability Company](https://www.cscglobal.com/service/cls/delaware-llc-guide/)
  - [DID (Decentralized Identifier) Specification](https://github.com/WebOfTrustInfo/rwot3-sf/blob/master/topics-and-advance-readings/did-spec-working-draft-03.md)

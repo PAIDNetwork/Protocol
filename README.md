@@ -16,21 +16,19 @@ An attestation is a proof issued by an attester or issuer, either human, smart c
 - *exp*: Expiration
 - *sub*: Subject
 
-
-Attestations must be single clause and composable. They are either part of VC or subset of VC Model, JSON Schemas converted to JWT using `did-jwt`.
+Attestations must be single clause and composable. They are either part of VC or subset of VC Model, JSON Schemas converted to JWT using `did-jwt`, in order to provide a self-contained token that can be optionally signed using JSON Web Signature (JWS) and/or encrypted using JSON Web Encryption (JWE).
 
 ## Components of Attestations
 - Proof issued by attesters (ie issuer attests a set of attributes or values).
 
-*** TODO Adjust Attestation (ID Verification) based in ZAP ***
+ - full legal name
+ - country and region (encoded under the ISO 3166 standard for storage in a Solidity Contract).
+ - rating (non-accredited, accredited, QIB, etc.varies by issuer & jurisdiction)
+ - Tax ID #
+ - One or more public blockchain addresses a required renewal date.
+ - the KECCAK256 hash of a subset of the  foregoing PII (the IDHash)
 
-Examples are:
-- Birth Certificate (single clause)
-- Passport (single clause)
-- License
-- Others 
-
-An example of a birth certificate clause might be eg Are you older than 18?, this attestation, because is a precondition, is attested offchain with traditional APIs instead of using onchain transactions. It means most of a smart agreement prerequisites will be proofs inside a Verifiable Credentials model. These proofs can also be used in conjuction Zero Knowledge technology, our approach will be using SNARKS with snarks.js.
+An example of a birth certificate clause might be eg Are you older than 18?, this attestation, because is a precondition, is attested off-chain with traditional APIs instead of using on-chain transactions. It means most of a smart agreement prerequisites will be proofs inside a Verifiable Credentials model. These proofs can also be used in conjuction Zero Knowledge technology.
 
 
 ## VC Model using Javascript
@@ -66,9 +64,10 @@ An example of a birth certificate clause might be eg Are you older than 18?, thi
 
 ```
 #### Agreements
+
 A Smart Agreements is build using the Verifiable Credentials, and contains:
 
-- A set of one more `Prequisites` (see Attestations)
+- A set of one more `Prerequisites` (see Attestations)
 - A set of Agreement `Conditions`, which can be DOM tagged (see Solido EVM Forms)
 - A set of resolutions which are mapped to a court and dispute Smart Contracts representing a DAO like construct.
 
@@ -79,6 +78,7 @@ Thus, a PAID Smart Agreement is:
 - A JSON Schema construct
 - Has the full JSON schema specs, which includes extensions using other schemas
 - Verifiable Credentials compatible
+- A Biometric/PKI infraestructura how two-step authentication
 - Decentralized Identity DID compatible
 
 *** TODO Define JSON Schema Interface for PAID Protocol Smart Agreements *** eg.[OpenAttestation](https://github.com/Open-Attestation/open-attestation/blob/master/src/schema/2.0/schema.json)
@@ -95,11 +95,11 @@ You sign up for a car insurance, in the contract, the following prerequisites ar
 - `Must have insurance worthiness`
 
 Because a contract can contain myriads of terms and conditions, a condition being a boolean value or some other value that requires ML data like
-classiification. 
+classification. 
 
 ##### Insurance terms and condition
 
-- `Collision`: Deductable, Full, ... terms and conditions
+- `Collision`: Deductible, Full, ... terms and conditions
 - `Crashed`
 - ...more
 
@@ -111,7 +111,7 @@ These conditions must be validated and coded in packaged forms. Solido Forms are
  [has Alice crashed Bob and accepted crash accident]
  
 
-Turn this to a matrix, where vertical are the `claims`, and horizonal are the different `actors` involved
+Turn this to a matrix, where vertical are the `claims`, and horizontal are the different `actors` involved
 [Alice, Bob]
 [0, 1]    - has Alice crashed Bob
 [0, 0]    - has Bob crashed Alice
@@ -179,13 +179,15 @@ const
 
 ### Introducing did-dpki, a decentralized identity method for PAID network
 
-*** TODO Define the problem and reason to create a customized did-dpki DID Method ***
+PAID Smart Agreements (Poroposal DID-DPKI-v1) need verifiable proof of identity to work well with legal contracts. Legal contracts, because they are binding, need a way to ensure all parties are accountable under a jurisdiction. In a simple legal agreement workflow, a KYC solution might be enough. But considering PAID is a decentralized based protocol, using smart contracts and oracles, we'll need a good set of technology stack that supports  enough data sources and still keep the level of decentralization required.
 
 
 ### PAID Oracles, Incentivized Oracles and other constructs
 
 
 ### PAID Token
+
+PAID Smart Agreements 
 
 ### **Summary**
 
@@ -196,6 +198,9 @@ By maintaining developer efficient processes, putting Proof of Identity and Proo
 - [ISO 3166 COUNTRY CODES](https://www.iso.org/iso-3166-country-codes.html)
 - [Verifiable Credentials Data Model 1.0](https://www.w3.org/TR/vc-data-model/)
 - [Decentralized Identifiers (DIDs) v1.0](https://www.w3.org/TR/did-core/)
+- [JSON Web Token (JWT) RFC7519](https://tools.ietf.org/html/rfc7519)
+- [Ecdsa Secp256k1 Recovery Signature 2020](https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/)
+- [Edwards-Curve Digital Signature Algorithm (EdDSA)](https://tools.ietf.org/html/rfc8032)
 - [DID Specification Registries](https://w3c.github.io/did-spec-registries/)
 - [Delaware Limited Liability Company](https://www.cscglobal.com/service/cls/delaware-llc-guide/)
 - [DID (Decentralized Identifier) Specification](https://github.com/WebOfTrustInfo/rwot3-sf/blob/master/topics-and-advance-readings/did-spec-working-draft-03.md)
