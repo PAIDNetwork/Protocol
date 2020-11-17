@@ -34,7 +34,6 @@
  - full legal name
  - country and region (encoded under the ISO 3166 standard for storage in a Solidity Contract).
  - rating (non-accredited, accredited, QIB, etc.varies by issuer & jurisdiction)
- - Tax ID #
  - One or more public blockchain addresses a required renewal date.
  - the KECCAK256 hash of a subset of the  foregoing PII (the IDHash)
 

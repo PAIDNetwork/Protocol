@@ -31,7 +31,7 @@ Attestations must be single clause and composable. They are either part of VC or
 An example of a birth certificate clause might be eg Are you older than 18?, this attestation, because is a precondition, is attested off-chain with traditional APIs instead of using on-chain transactions. It means most of a smart agreement prerequisites will be proofs inside a Verifiable Credentials model. These proofs can also be used in conjuction Zero Knowledge technology.
 
 
-## VC Model using Javascript
+## Example of VC Model using Javascript
 ```javascript
 {
   "@context": [
@@ -76,17 +76,14 @@ A `PAID Smart Agreement` is then based of a root JSON Schema and inherited schem
 Thus, a PAID Smart Agreement is:
 
 - A JSON Schema construct
-- Has the full JSON schema specs, which includes extensions using other schemas
+- Has the full JSON schema specs, which includes extensions using other schemas, where each schema permit to the protocol taken a right decision based in a algorithm preestablished.
 - Verifiable Credentials compatible
 - A Biometric/PKI infraestructura how two-step authentication
 - Decentralized Identity DID compatible
 
-*** TODO Define JSON Schema Interface for PAID Protocol Smart Agreements *** eg.[OpenAttestation](https://github.com/Open-Attestation/open-attestation/blob/master/src/schema/2.0/schema.json)
+To make Solidity Smart Contract make decisiones using a rules engine like code, we classify or transform a matrix of options to boolean.
 
-
-To make Solidity make decisiones using a rules engine like code, we classify or transform a matrix of options to boolean.
-
-##### Example 1 - Car Insurance
+##### Use Case / Example 1 - Car Insurance
 
 You sign up for a car insurance, in the contract, the following prerequisites are required:
 
@@ -94,8 +91,7 @@ You sign up for a car insurance, in the contract, the following prerequisites ar
 - `Must have valid license`
 - `Must have insurance worthiness`
 
-Because a contract can contain myriads of terms and conditions, a condition being a boolean value or some other value that requires ML data like
-classification. 
+Because a contract can contain myriads of terms and conditions, a condition being a boolean value or some other value that requires ML data like classification. 
 
 ##### Insurance terms and condition
 
@@ -104,6 +100,7 @@ classification.
 - ...more
 
 These conditions must be validated and coded in packaged forms. Solido Forms are then formatted either as protocol onchain format, or stored offline.
+
  Given the following matrix:
  
  [signature],
@@ -154,27 +151,21 @@ Then each decision making contract is created as a Metatransaction and uses EIP7
 3. Pending define eg
     a. signed(hash [0,0]) === signed(address)
 
-
-
-
-
-```
-// pseudo code
-const 
-
-
-```
-
 #### Resolutions, courts and disputes
 
-### Introducing Solido Forms, an agnostic template framework to stored JSON Schema mapped data
+
+
+### **Introducing Solido Forms, an agnostic template framework to stored JSON Schema mapped data**
 
 *** TODO Define JSON Schema Interface for Solido Forms, migrate ABIForms documentation ***
 
 
-### Smart Routers, math constructs and digital signatures 
+### **Smart Routers, math constructs and digital signatures**
 
-*** TODO Define how to use digital signatures as routing mechanism using matrix algebra, routing  algos and typed data messages ***
+PAID Smart Agreements, In accordance with our development, two options are presented for the deployment of Smart Routers:
+
+- Smart routers based on Upgradable Smart Contracts, or contract proxy management, using did: dpki: id as the user of the contracts to adjust their operation, allowing to delegate, approve or revoke permissions. These would be displayed through Solang (Solidity / Substrate Compiler), as if they were written in RUST.
+- Substrate Runtime Module development has the intention of producing lean, performant, and fast nodes. It affords none of the protections or overhead of transaction reverting and does not implicitly introduce any fee system to the computation which nodes on your chain run, and Provide low-level access to your entire blockchain, remove the overhead of built-in safety for performance, and besides require a high level to entry for developers.Has no inherent economic incentives to repel bad actors.
 
 
 ### Introducing did-dpki, a decentralized identity method for PAID network
