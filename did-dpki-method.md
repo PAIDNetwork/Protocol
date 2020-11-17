@@ -186,10 +186,6 @@ const
 
 ```
 
-####ccccc`w
-
-####m
-
 #### Resolutions, courts and disputes
 
 ### Introducing Solido Forms, an agnostic template framework to stored JSON Schema mapped data
