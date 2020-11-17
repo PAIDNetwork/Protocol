@@ -158,29 +158,6 @@ Then each decision making contract is created as a Metatransaction and uses EIP7
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ```
 // pseudo code
 const 
@@ -209,3 +186,17 @@ const
 
 
 ### PAID Token
+
+### **Summary**
+
+By maintaining developer efficient processes, putting Proof of Identity and Proof of Address allows our smart agreements protocol, to have near identical set of requirements as those found in a KYC solution. At the same time, it doesn't disrupt the CA business, it expands the CA and digital signing for vendors. In future protocol upgrades, an incentivization model could be added to make eg a reputation voting system, to be able to have another layer of trust.
+
+### References
+
+- [ISO 3166 COUNTRY CODES](https://www.iso.org/iso-3166-country-codes.html)
+- [Verifiable Credentials Data Model 1.0](https://www.w3.org/TR/vc-data-model/)
+- [Decentralized Identifiers (DIDs) v1.0](https://www.w3.org/TR/did-core/)
+- [DID Specification Registries](https://w3c.github.io/did-spec-registries/)
+- [Delaware Limited Liability Company](https://www.cscglobal.com/service/cls/delaware-llc-guide/)
+- [DID (Decentralized Identifier) Specification](https://github.com/WebOfTrustInfo/rwot3-sf/blob/master/topics-and-advance-readings/did-spec-working-draft-03.md)
+- [Biometric epassport](https://en.wikipedia.org/wiki/Biometric_passport)
