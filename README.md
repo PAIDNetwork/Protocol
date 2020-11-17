@@ -35,11 +35,10 @@ to ensure all parties are accountable under a jurisdiction. In a simple legal ag
  #### **An encrypted off-chain database of personally identifiable information (PII)** 
 
  - full legal name
- - country and region (encoded under the ISO 3166 standard for storage in OrgIDVerifier.sol or RegistrarIDVerifier.sol).
- - rating (non-accredited, accredited, QIB, etc.varies by issuer & jurisdiction—will be represented by an arbitrary uint8 in OrgIDVerifier.sol or RegistrarIDVerifier.sol)
+ - country and region (encoded under the ISO 3166 standard for storage in a Solidity Contract).
+ - rating (non-accredited, accredited, QIB, etc.varies by issuer & jurisdiction)
  - Tax ID #
- - One or more public blockchain addresses
-a required renewal date (will be represented in epoch time in OrgIDVerifier.sol or RegistrarIDVerifier.sol)
+ - One or more public blockchain addresses a required renewal date.
  - the KECCAK256 hash of a subset of the  foregoing PII (the IDHash)
 
  #### **JSON Schema**
@@ -83,4 +82,9 @@ A biometric passport (also known as an e-passport, ePassport, or a digital passp
  
  ### References
  
- TODO
+ - [ISO 3166 COUNTRY CODES](https://www.iso.org/iso-3166-country-codes.html)
+ - [Verifiable Credentials Data Model 1.0](https://www.w3.org/TR/vc-data-model/)
+ - [Decentralized Identifiers (DIDs) v1.0](https://www.w3.org/TR/did-core/)
+ - [DID Specification Registries](https://w3c.github.io/did-spec-registries/)
+ - [Delaware Limited Liability Company](https://www.cscglobal.com/service/cls/delaware-llc-guide/)
+ - [Biometric epassport](https://en.wikipedia.org/wiki/Biometric_passport)
