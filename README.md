@@ -111,9 +111,10 @@ PAID Smart Agreements (Poroposal DID-DPKI-v1) need verifiable proof of identity 
 ### PAID Oracles, Incentivized Oracles and other constructs
 
 
+
 ### PAID Token
 
-PAID Smart Agreements, have a capacity to handle differents type of token, with backward to ERC 20 and ERC 223, and to interface with offchain securities like SAFTs, follow the Claims Token Standard ERC-1843 ana the Simple Restricted Token Standard ERC1404 
+PAID Smart Agreements Token, have a capacity to handle differents type of token, with backward to ERC 20 and ERC 223, and to interface with offchain securities like SAFTs, follow the Claims Token Standard ERC-1843 ana the Simple Restricted Token Standard ERC1404. It eventually allows it to be the ideal gateway DeFi and OpenFinance ecosystem assets such as debt positions, loans, derivatives and bonds are emerging. These assets incur future cash flows, e.g. repayments or dividends. Currently there is no standard for efficiently distributing claims on future cash flow of financial contracts among token holders. A clear and simple standard is needed to allow Dapps and exchanges to work with cash-flow producing tokens
 
 ### **Summary**
 
