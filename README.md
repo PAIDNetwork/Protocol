@@ -94,8 +94,6 @@ To make Solidity Smart Contract make decisiones using a rules engine like code, 
 
 ### **Introducing Solido Forms, an agnostic template framework to stored JSON Schema mapped data**
 
-*** TODO Define JSON Schema Interface for Solido Forms, migrate ABIForms documentation ***
-
 
 ### **Smart Routers, math constructs and digital signatures**
 
