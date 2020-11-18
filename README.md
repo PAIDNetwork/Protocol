@@ -83,13 +83,13 @@ Thus, a PAID Smart Agreement is:
 
 To make Solidity Smart Contract make decisiones using a rules engine like code, we classify or transform a matrix of options to boolean.
 
-##### Use Case / Example 1 -  Limited Liability Autonomous Organizations
+##### **Use Case / Example 1 -  Limited Liability Autonomous Organizations**
 
 
 
 
 
-#### Resolutions, courts and disputes
+#### **Resolutions, courts and disputes**
 
 
 
@@ -103,16 +103,16 @@ To make Solidity Smart Contract make decisiones using a rules engine like code, 
 PAID Smart Agreements, 
 
 
-### Introducing did-dpki, a decentralized identity method for PAID network
+### **Introducing did-dpki, a decentralized identity method for PAID network**
 
 PAID Smart Agreements (Poroposal DID-DPKI-v1) need verifiable proof of identity to work well with legal contracts. Legal contracts, because they are binding, need a way to ensure all parties are accountable under a jurisdiction. In a simple legal agreement workflow, a off-chain KYC solution might be enough. But considering PAID is a decentralized based protocol, using smart contracts and oracles, we'll need a good set of technology stack that supports enough data sources and still keep the level of decentralization required, being the ideal gateway to manage contracts in the real world through legally recognized structures and Ricardian Contract provided by services such as that offered by PAID Smart Agreements
 
 
-### PAID Oracles, Incentivized Oracles and other constructs
+### **PAID Oracles, Incentivized Oracles and other constructs**
 
 
 
-### PAID Token
+### **PAID Token**
 
 PAID Smart Agreements Token, have a capacity to handle differents type of token, with backward to ERC 20 and ERC 223, and to interface with offchain securities like SAFTs, follow the Claims Token Standard ERC-1843 ana the Simple Restricted Token Standard ERC1404. It eventually allows it to be the ideal gateway DeFi and OpenFinance ecosystem assets such as debt positions, loans, derivatives and bonds are emerging. These assets incur future cash flows, e.g. repayments or dividends. Currently there is no standard for efficiently distributing claims on future cash flow of financial contracts among token holders. A clear and simple standard is needed to allow Dapps and exchanges to work with cash-flow producing tokens
 
@@ -120,7 +120,7 @@ PAID Smart Agreements Token, have a capacity to handle differents type of token,
 
 By maintaining developer efficient processes, putting Proof of Identity and Proof of Address allows our smart agreements protocol, to have near identical set of requirements as those found in a KYC solution. At the same time, it doesn't disrupt the CA business, it expands the CA and digital signing for vendors. In future protocol upgrades, an incentivization model could be added to make eg a reputation voting system, to be able to have another layer of trust.
 
-### References
+### **References**
 
 - [ISO 3166 COUNTRY CODES](https://www.iso.org/iso-3166-country-codes.html)
 - [Verifiable Credentials Data Model 1.0](https://www.w3.org/TR/vc-data-model/)
