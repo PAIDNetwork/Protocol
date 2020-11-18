@@ -24,7 +24,6 @@ Attestations must be single clause and composable. They are either part of VC or
  - full legal name
  - country and region (encoded under the ISO 3166 standard for storage in a Solidity Contract).
  - rating (non-accredited, accredited, QIB, etc.varies by issuer & jurisdiction)
- - Tax ID #
  - One or more public blockchain addresses a required renewal date.
  - the KECCAK256 hash of a subset of the  foregoing PII (the IDHash)
 
@@ -105,7 +104,7 @@ PAID Smart Agreements,
 
 ### **Introducing did-dpki, a decentralized identity method for PAID network**
 
-PAID Smart Agreements (Poroposal DID-DPKI-v1) need verifiable proof of identity to work well with legal contracts. Legal contracts, because they are binding, need a way to ensure all parties are accountable under a jurisdiction. In a simple legal agreement workflow, a off-chain KYC solution might be enough. But considering PAID is a decentralized based protocol, using smart contracts and oracles, we'll need a good set of technology stack that supports enough data sources and still keep the level of decentralization required, being the ideal gateway to manage contracts in the real world through legally recognized structures and Ricardian Contract provided by services such as that offered by PAID Smart Agreements
+PAID Smart Agreements (Proposal DID-DPKI-v1) need verifiable proof of identity to work well with legal contracts. Legal contracts, because they are binding, need a way to ensure all parties are accountable under a jurisdiction. In a simple legal agreement workflow, a off-chain KYC solution might be enough. But considering PAID is a decentralized based protocol, using smart contracts and oracles, we'll need a good set of technology stack that supports enough data sources and still keep the level of decentralization required, being the ideal gateway to manage contracts in the real world through legally recognized structures and Ricardian Contract provided by services such as that offered by PAID Smart Agreements
 
 
 ### **PAID Oracles, Incentivized Oracles and other constructs**
