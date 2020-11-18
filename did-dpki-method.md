@@ -64,13 +64,9 @@
  
  A Smart Contract in Polkadot can issue ECDSA keypairs. And either using EVM or Polkadot, be able to verify ECDSA keypairs onchain.
  
- #### **Proof of Address**
- 
- Using an existing KYC provider Proof of Address service, create a Chainlink oracle that handles any KYC related actions. In this special case, because of cost, any proof of address validation must be accounted in the transaction and billed depending on token being used.
+ #### **Proof of Country** *(How two-step authentication)*
 
- #### **Proof of epassport** *(How two-step authentication)*
-
-A biometric passport (also known as an e-passport, ePassport, or a digital passport) is a traditional passport that has an embedded electronic microprocessor chip which contains biometric information that can be used to authenticate the identity of the passport holder. It uses contactless smart card technology, including a microprocessor chip (computer chip) and antenna (for both power to the chip and communication) embedded in the front or back cover, or centre page, of the passport.
+ A biometric passport (also known as an e-passport, ePassport, or a digital passport) is a traditional passport that has an embedded electronic microprocessor chip which contains biometric information that can be used to authenticate the identity of the passport holder. With this information we have an off-chain attestation of the data provided by the users in the verifiable Credentials, guaranteeing an additional verification (proof) of the user's data and the legal location of the protocol user.
  
  ### **Summary**
  

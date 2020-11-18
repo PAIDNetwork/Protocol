@@ -83,73 +83,11 @@ Thus, a PAID Smart Agreement is:
 
 To make Solidity Smart Contract make decisiones using a rules engine like code, we classify or transform a matrix of options to boolean.
 
-##### Use Case / Example 1 - Car Insurance
-
-You sign up for a car insurance, in the contract, the following prerequisites are required:
-
-- `Must be 18 years old or more`
-- `Must have valid license`
-- `Must have insurance worthiness`
-
-Because a contract can contain myriads of terms and conditions, a condition being a boolean value or some other value that requires ML data like classification. 
-
-##### Insurance terms and condition
-
-- `Collision`: Deductible, Full, ... terms and conditions
-- `Crashed`
-- ...more
-
-These conditions must be validated and coded in packaged forms. Solido Forms are then formatted either as protocol onchain format, or stored offline.
-
- Given the following matrix:
- 
- [signature],
- [has Alice crashed Bob and accept to have court settlement]
- [has Alice crashed Bob and accepted crash accident]
- 
-
-Turn this to a matrix, where vertical are the `claims`, and horizontal are the different `actors` involved
-[Alice, Bob]
-[0, 1]    - has Alice crashed Bob
-[0, 0]    - has Bob crashed Alice
-[0, 0]    - has Alice accepted accident
-[0, 0]    - has Bob accepted accident
+##### Use Case / Example 1 -  Limited Liability Autonomous Organizations
 
 
-Thus, we get a way to calculate decision making using digital signatures, what we call Smart Agreements, using smart contracts with digital signatures features. 
-Using digital signatures signing, we can transform clauses to Solidity/RLP compatible packaged data.
-
-A packed message with VC digital signatures, can be translated to xxHash operations (AND, OR, XOR):
-
-[Alice, Bob]
-[hash_0_0, hash_0_1]
-[...]
-
-Once PAID Solido Forms generates the matrix to ABIEncode or RLP, it is used in 2 scenarios:
-
-1. xxHash are used as hash verifications (boolean algebra)
-2. Because a hash, in this case non-cryptography, we can sign that with EdDSA/ECDSA and use that for Smart Routing purposes and/or rules engine.
-
-In this case:
-
-- "Has Alice crashed Bob: [$true]"  -> xxHash -> xxHash signed with ECDSA
-- "Has Alice crashed Bob: [$false]" -> xxHash -> xxHash signed with ECDSA
-
-Then you could send it to Smart Routing:
 
 
-findDecisionFromAgreementFacts(
-   smartAgreement,   // as metadata
-   oracleFacts,      // has Alice crashed Bob from real time data sources = yes
-   anyExistingSignatures
-)
-
-Then each decision making contract is created as a Metatransaction and uses EIP712:
-
-1. EIP712 Domain Name -- CarInsuranceDecisionMaker
-2. EIP712 Method implemented -- handleCarCollisionBetweenTwoParties()
-3. Pending define eg
-    a. signed(hash [0,0]) === signed(address)
 
 #### Resolutions, courts and disputes
 
@@ -162,15 +100,12 @@ Then each decision making contract is created as a Metatransaction and uses EIP7
 
 ### **Smart Routers, math constructs and digital signatures**
 
-PAID Smart Agreements, In accordance with our development, two options are presented for the deployment of Smart Routers:
-
-- Smart routers based on Upgradable Smart Contracts, or contract proxy management, using did: dpki: id as the user of the contracts to adjust their operation, allowing to delegate, approve or revoke permissions. These would be displayed through Solang (Solidity / Substrate Compiler), as if they were written in RUST.
-- Substrate Runtime Module development has the intention of producing lean, performant, and fast nodes. It affords none of the protections or overhead of transaction reverting and does not implicitly introduce any fee system to the computation which nodes on your chain run, and Provide low-level access to your entire blockchain, remove the overhead of built-in safety for performance, and besides require a high level to entry for developers.Has no inherent economic incentives to repel bad actors.
+PAID Smart Agreements, 
 
 
 ### Introducing did-dpki, a decentralized identity method for PAID network
 
-PAID Smart Agreements (Poroposal DID-DPKI-v1) need verifiable proof of identity to work well with legal contracts. Legal contracts, because they are binding, need a way to ensure all parties are accountable under a jurisdiction. In a simple legal agreement workflow, a KYC solution might be enough. But considering PAID is a decentralized based protocol, using smart contracts and oracles, we'll need a good set of technology stack that supports  enough data sources and still keep the level of decentralization required.
+PAID Smart Agreements (Poroposal DID-DPKI-v1) need verifiable proof of identity to work well with legal contracts. Legal contracts, because they are binding, need a way to ensure all parties are accountable under a jurisdiction. In a simple legal agreement workflow, a off-chain KYC solution might be enough. But considering PAID is a decentralized based protocol, using smart contracts and oracles, we'll need a good set of technology stack that supports enough data sources and still keep the level of decentralization required, being the ideal gateway to manage contracts in the real world through legally recognized structures and Ricardian Contract provided by services such as that offered by PAID Smart Agreements
 
 
 ### PAID Oracles, Incentivized Oracles and other constructs
@@ -178,7 +113,7 @@ PAID Smart Agreements (Poroposal DID-DPKI-v1) need verifiable proof of identity 
 
 ### PAID Token
 
-PAID Smart Agreements 
+PAID Smart Agreements, have a capacity to handle differents type of token, with backward to ERC 20 and ERC 223, and to interface with offchain securities like SAFTs, follow the Claims Token Standard ERC-1843 ana the Simple Restricted Token Standard ERC1404 
 
 ### **Summary**
 
@@ -196,3 +131,4 @@ By maintaining developer efficient processes, putting Proof of Identity and Proo
 - [Delaware Limited Liability Company](https://www.cscglobal.com/service/cls/delaware-llc-guide/)
 - [DID (Decentralized Identifier) Specification](https://github.com/WebOfTrustInfo/rwot3-sf/blob/master/topics-and-advance-readings/did-spec-working-draft-03.md)
 - [Biometric epassport](https://en.wikipedia.org/wiki/Biometric_passport)
+- [Ricardian contract](https://en.wikipedia.org/wiki/Ricardian_contract)
