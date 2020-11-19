@@ -84,16 +84,32 @@ To make Solidity Smart Contract make decisiones using a rules engine like code, 
 
 ##### **Use Case / Example 1 -  Limited Liability Autonomous Organizations**
 
+The PAID Smart Agreements allow an organization where the management of digital assets as a representation of physical assets to carry out agreements of a different nature where the verification of credentials of the signatories of the agreements is required, in addition to the attestation of the data indicated in the moment of entering into such agreements. In addition to allowing the verification of the legal jurisdiction of the signatories and validating it with that of the conclusion of the contract.
 
+PAID Smart Agreements, allows the verification of credentials in a decentralized way and with the use of APIs and Oracles available for these functions, taking advantage of incentive schemes such as DeFi and Chainlink, allowing the attestation of:
+- full legal name
+- Country and Region
+- A Biometric / PKI infrastructure how two-step authentication
+- Decentralized Identity DID supported
 
+Because a contract can contain myriads of terms and conditions, a condition being a boolean value or some other value that requires ML data like classification.
 
+Then you could send it to Smart Routing:
+
+findDecisionFromAgreementFacts { 
+  - smartAgreement, // as metadata oracleFacts
+  // has Alice accept a penalty for late payment to Bob, // from real time data sources = yes // anyExistingSignatures <br/>
+}
+
+Then, each decision-making contract, based on the pre-defined conditions in the Smart Agreements previously, according to the selected template.
 
 #### **Resolutions, courts and disputes**
 
+Each decision-making contract, in function of the resolutions, disputes or management of imponderables that must be handled by cutting hybrids or physics outside the scope of the contract but defined in it as an oracle to handle disputes, all this is created as a meta transaction and uses EIP712
 
-
-### **Introducing Solido Forms, an agnostic template framework to stored JSON Schema mapped data**
-
+1. EIP712 Domain Name -- LeasingDecisionMaker
+2. EIP712 Method implemented -- PenaltyforLatePayment()
+3. Pending define eg a. signed(hash [0,0]) === signed(address)
 
 ### **Smart Routers, math constructs and digital signatures**
 
