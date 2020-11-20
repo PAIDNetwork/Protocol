@@ -109,9 +109,9 @@ Then, each decision-making contract, based on the pre-defined conditions in the 
 
 #### **Resolutions, courts and disputes**
 
-Each decision-making contract, depending on the resolutions, disputes or handling of imponderables that must be handled hybrid or physical courts outside the scope of the contract but defined in it as an oracle to handle disputes.
+Each decision-making contract, depending on the template and the conditions set forth in them, to make resolutions, resolve disputes or the handling of imponderables that must be handled by hybrid or physical courts outside the scope of the contract but defined within it as a oracle to handle such disagreements between signature parties.
 
-All this logic will be handled from the selected contract template, and the events adjusted based on the meta transaction and uses EIP712, to indicate to the Smart Routers the actions to be executed according to the pre-established conditions in the Smart Agreements.
+All this logic will be managed from the selected Smart Agreements template, and the particular conditions or events adjusted and sent through meta-transactions based on the EIP712 standard, to the Smart Routers with the actions to be executed according to the conditions and events. pre-established in the Smart Agreements. Eg:
 
 1. EIP712 Domain Name -- LeasingDecisionMaker
 2. EIP712 Method implemented -- PenaltyforLatePayment()
@@ -134,11 +134,11 @@ PAID Smart Agreements (Proposal DID-DPKI-v1) need verifiable proof of identity t
 
 PAID Smart Agreements, in a first stage, foresees the use of oracles to improve the quality in the verification of credentials and the attestation of the physical and legal location of the signature Parties of the Smart Agreements, thus improving the level of security and precision of the data provided by users and verified by the platform, guaranteeing their legitimacy.
 
-PAID Smart Agreements, in a third stage, provides for the management of an incentive model for users of the protocol, allowing them to share aspects of the use of the platform such as reputation, transparency and compliance index in the execution of Smart Agreements made in the same, without of course being violated aspects such as the security and privacy of the information, the users having control of the data at all times, which will or will not be shared through Oraculos and other constructs.
+PAID Smart Agreements, in a third stage, provides for the management of an incentive model for users of the protocol, allowing them to share aspects of the use of the platform such as reputation, transparency and compliance index in the execution of Smart Agreements made in the same, without of course being violated aspects such as the security and privacy of the information, the users having control of the data at all times, which will or will not be shared through Oracles and other constructs.
 
 ### **PAID Token**
 
-PAID Smart Agreements Token, have a capacity to handle differents type of token, with backward to ERC 20 and ERC 223, and to interface with offchain securities like SAFTs, follow the Claims Token Standard ERC-1843 ana the Simple Restricted Token Standard ERC1404. It eventually allows it to be the ideal gateway DeFi and OpenFinance ecosystem assets such as debt positions, loans, derivatives and bonds are emerging. These assets incur future cash flows, e.g. repayments or dividends. Currently there is no standard for efficiently distributing claims on future cash flow of financial contracts among token holders. A clear and simple standard is needed to allow Dapps and exchanges to work with cash-flow producing tokens
+PAID Smart Agreements Token, have a capacity to handle diferents type of token, with backward to ERC 20 and ERC 223, and to interface with offchain securities like SAFTs, follow the Claims Token Standard ERC-1843 ana the Simple Restricted Token Standard ERC1404. It eventually allows in the second stage, it to be the ideal gateway DeFi and OpenFinance ecosystem assets such as debt positions, loans, derivatives and bonds are emerging. These assets incur future cash flows, e.g. repayments or dividends. Currently there is no standard for efficiently distributing claims on future cash flow of financial contracts among token holders. A clear and simple standard is needed to allow Dapps and exchanges to work with cash-flow producing tokens
 
 ### **Summary**
 
