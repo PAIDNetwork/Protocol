@@ -1,4 +1,4 @@
-# PAID Smart Agreements Protocol (DID-DPKI Proposal v1)
+# PAID Smart Agreements Protocol 
 
 ## Chapter 1 - Verifiable credentials, attestations, proof, quorum signatures and oraclized data feeds
 
@@ -18,14 +18,12 @@ An attestation is a proof issued by an attester or issuer, either human, smart c
 Attestations must be single clause and composable. They are either part of VC or subset of VC Model, JSON Schemas converted to JWT using `did-jwt`, in order to provide a self-contained token that can be optionally signed using JSON Web Signature (JWS) and/or encrypted using JSON Web Encryption (JWE).
 
 ## Components of Attestations
-- Proof issued by attesters (ie issuer attests a set of attributes or values).
+ Proof issued by attesters (ie issuer attests a set of attributes or values).
 
  - Full Legal Name.
  - country and region (encoded under the ISO 3166 standard for storage in a Solidity Contract).
  - rating (non-accredited, accredited, QIB, etc.varies by issuer & jurisdiction).
  - One or more public blockchain addresses a required renewal date.
- - the EdDSA25519 hash of a subset of the  foregoing PII (the IDHash).
- - A Biometric/PKI infraestructura how two-step authentication (offchain).
 
 An example of a birth certificate clause might be eg Are you older than 18?, this attestation, because is a precondition, is attested off-chain with traditional APIs instead of using on-chain transactions. It means most of a Smart Agreement prerequisites will be proofs inside a Verifiable Credentials model. These proofs can also be used in conjunction Zero Knowledge technology.
 
@@ -77,7 +75,6 @@ Thus, a PAID Smart Agreement is:
 - A JSON Schema construct
 - Has the full JSON schema specs, which includes extensions using other schemas, where each schema permit to the protocol taken a right decision based in a algorithm preestablished.
 - Verifiable Credentials compatible
-- A Biometric/PKI infraestructura how two-step authentication
 - Decentralized Identity DID compatible
 - Reputation Score.
 
