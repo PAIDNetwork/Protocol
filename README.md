@@ -24,7 +24,7 @@ Attestations must be single clause and composable. They are either part of VC or
  - country and region (encoded under the ISO 3166 standard for storage in a Solidity Contract).
  - rating (non-accredited, accredited, QIB, etc.varies by issuer & jurisdiction)
  - One or more public blockchain addresses a required renewal date.
- - the ECDSAsecp256k1/EdDSA25519 hash of a subset of the  foregoing PII (the IDHash)
+ - the EdDSA25519 hash of a subset of the  foregoing PII (the IDHash)
 
 An example of a birth certificate clause might be eg Are you older than 18?, this attestation, because is a precondition, is attested off-chain with traditional APIs instead of using on-chain transactions. It means most of a smart agreement prerequisites will be proofs inside a Verifiable Credentials model. These proofs can also be used in conjuction Zero Knowledge technology.
 
