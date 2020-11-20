@@ -20,14 +20,15 @@ Attestations must be single clause and composable. They are either part of VC or
 ## Components of Attestations
 - Proof issued by attesters (ie issuer attests a set of attributes or values).
 
- - full legal name
+ - Full Legal Name.
  - country and region (encoded under the ISO 3166 standard for storage in a Solidity Contract).
- - rating (non-accredited, accredited, QIB, etc.varies by issuer & jurisdiction)
+ - rating (non-accredited, accredited, QIB, etc.varies by issuer & jurisdiction).
  - One or more public blockchain addresses a required renewal date.
- - the EdDSA25519 hash of a subset of the  foregoing PII (the IDHash)
- - A Biometric/PKI infraestructura how two-step authentication (offchain)
+ - the EdDSA25519 hash of a subset of the  foregoing PII (the IDHash).
+ - A Biometric/PKI infraestructura how two-step authentication (offchain).
+ - Reputation scoring system.
 
-An example of a birth certificate clause might be eg Are you older than 18?, this attestation, because is a precondition, is attested off-chain with traditional APIs instead of using on-chain transactions. It means most of a Smart Agreement prerequisites will be proofs inside a Verifiable Credentials model. These proofs can also be used in conjuction Zero Knowledge technology.
+An example of a birth certificate clause might be eg Are you older than 18?, this attestation, because is a precondition, is attested off-chain with traditional APIs instead of using on-chain transactions. It means most of a Smart Agreement prerequisites will be proofs inside a Verifiable Credentials model. These proofs can also be used in conjunction Zero Knowledge technology.
 
 
 ## Example of VC Model using Javascript
@@ -99,9 +100,9 @@ Then you could send it to Smart Routing:
 findDecisionFromAgreementFacts { <br/>
 <br/>
   smartAgreement, // as metadata oracleFacts <br/>
-  // has Alice accept a penalty for late payment to Bob, <br/>
-  // from real time data sources = yes <br/>
-  // anyExistingSignatures <br/>
+  signed(hash [1,0]) // has Alice accept a penalty for late payment to Bob `[Alice, Bod]`, <br/>
+  PayOnTime() == false // from real time data sources = yes <br/>
+  ExecutePenalty(Alice) // anyExistingSignatures <br/>
 <br/>
 }
 
@@ -132,19 +133,19 @@ PAID Smart Agreements (Proposal DID-DPKI-v1) need verifiable proof of identity t
 
 ### **PAID Oracles, Incentivized Oracles and other constructs**
 
-PAID Smart Agreements, in a first stage, foresees the use of oracles to improve the quality in the verification of credentials and the attestation of the physical and legal location of the signature Parties of the Smart Agreements, thus improving the level of security and precision of the data provided by users and verified by the platform, guaranteeing their legitimacy.
+PAID Smart Agreements, in a first phase, foresees the use of oracles to improve the quality in the verification of credentials and the attestation of the physical and legal location of the signature Parties of the Smart Agreements, thus improving the level of security and precision of the data provided by users and verified by the platform, guaranteeing their legitimacy.
 
-PAID Smart Agreements, in a third stage, provides for the management of an incentive model for users of the protocol, allowing them to share aspects of the use of the platform such as reputation, transparency and compliance index in the execution of Smart Agreements made in the same, without of course being violated aspects such as the security and privacy of the information, the users having control of the data at all times, which will or will not be shared through Oracles and other constructs.
+PAID Smart Agreements, in a second phase, provides for the management of an incentive model for users of the protocol, allowing them to share aspects of the use of the platform such as reputation, transparency and compliance index in the execution of Smart Agreements made in the same, without of course being violated aspects such as the security and privacy of the information, the users having control of the data at all times, which will or will not be shared through Oracles and other constructs.
 
 ### **PAID Token**
 
 PAID Smart Agreements Token, have a capacity to handle diferents type of token, with backward to ERC 20 and ERC 223, and to interface with offchain securities like SAFTs, follow the Claims Token Standard ERC-1843 ana the Simple Restricted Token Standard ERC1404. 
 
-It eventually allows in the second stage, it to be the ideal gateway DeFi and OpenFinance ecosystem assets such as debt positions, loans, derivatives and bonds are emerging. These assets incur future cash flows, e.g. repayments or dividends. Currently there is no standard for efficiently distributing claims on future cash flow of financial contracts among token holders. A clear and simple standard is needed to allow Dapps and exchanges to work with cash-flow producing tokens
+It eventually allows in the first stage, it to be the ideal gateway DeFi and OpenFinance ecosystem assets including staking, insurance and escrow, allowing users to complete business agreement process from beginning to end through the platform. These assets incur future cash flows, e.g. repayments or dividends. Currently there is no standard for efficiently distributing claims on future cash flow of financial contracts among token holders. A clear and simple standard is needed to allow Dapps and exchanges to work with cash-flow producing tokens
 
 ### **Summary**
 
-By maintaining developer efficient processes, putting Proof of Identity and Proof of Address allows our PAID Smart Agreements Protocol, to have near identical set of requirements as those found in a KYC solution. At the same time, it doesn't disrupt the CA business, it expands the CA and digital signing for vendors. In future protocol upgrades, an incentivization model could be added to make eg a reputation voting system, to be able to have another layer of trust.
+By maintaining developer efficient processes, putting Proof of Identity and Proof of Country allows our PAID Smart Agreements Protocol, to have near identical set of requirements as those found in a KYC solution. At the same time, it doesn't disrupt the CA business, it expands the CA and digital signing for vendors. In future protocol upgrades, an incentivization model could be added to make eg a reputation scoring and voting system, to be able to have another layer of trust.
 
 ### **References**
 
