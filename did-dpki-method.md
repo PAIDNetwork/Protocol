@@ -1,6 +1,6 @@
  ## did-dpki
 
- ### A did method to verify identity using Domain Verification with Certificate Authorities and Proof of Address with MTRD for Offline Two-Factor validation
+ ### A did method to verify identity using Domain Verification with Certificate Authorities and Proof of Citizenship for Two-Factor validation
 
 
  ### Why did-dpki
@@ -66,13 +66,13 @@
  
  A Smart Contract in Polkadot can issue EdDSA keypairs. And either using EVM or Polkadot, be able to verify EdDSA keypairs onchain.
  
- #### **Proof of Country** *(Two-factor validation)*
+ #### **Proof of Citizenship** *(Two-factor validation)*
 
- A biometric passport (also known as an e-passport, ePassport, or a digital passport) is a traditional passport that has an embedded electronic microprocessor chip which contains biometric information that can be used to authenticate the identity of the passport holder. With this information we have an off-chain attestation of the data provided by the users in the verifiable Credentials, guaranteeing an additional verification (proof) of the user's data and the legal location of the protocol user.
+ Is based in ICAO TRIP Strategy specified by the International Civil Aviation Organization (ICAO) that implement how a biometric passport (also known as an e-passport, ePassport, or a digital passport) is a traditional passport that has an embedded electronic microprocessor chip which contains biometric information that can be used to authenticate the identity of the passport holder. With this information we have an off-chain attestation of the data provided by the users in the verifiable Credentials, guaranteeing an additional verification (proof) of the user's data and the legal location of the protocol user.
  
  ### **Summary**
  
- By maintaining low cost approach and using existing technology infrastructure as IPFS, IPNS, Let's Encrypt, DAO, LAOs allows us to use Proof of Identity and Proof of Address in PAID smart agreements protocol, to have near identical set of requirements as those found in a KYC solution. At the same time, it doesn't disrupt the CA business, it expands the CA and digital signing for vendors. In future protocol upgrades, an incentivization model could be added to make eg a reputation voting system, to be able to have another layer of trust.
+ By maintaining low cost approach and using existing technology infrastructure as IPFS, IPNS, Let's Encrypt, DAO, LAOs allows us to use Proof of Citizenship and Proof of Address in PAID smart agreements protocol, to have near identical set of requirements as those found in a KYC solution. At the same time, it doesn't disrupt the CA business, it expands the CA and digital signing for vendors. In future protocol upgrades, an incentivization model could be added to make eg a reputation voting system, to be able to have another layer of trust.
  
  ### References
  
@@ -85,4 +85,5 @@
  - [DID Specification Registries](https://w3c.github.io/did-spec-registries/)
  - [Delaware Limited Liability Company](https://www.cscglobal.com/service/cls/delaware-llc-guide/)
  - [DID (Decentralized Identifier) Specification](https://github.com/WebOfTrustInfo/rwot3-sf/blob/master/topics-and-advance-readings/did-spec-working-draft-03.md)
+ - [ICAO TRIP](https://www.icao.int/Security/FAL/TRIP/Pages/default.aspx)
  - [Biometric epassport](https://en.wikipedia.org/wiki/Biometric_passport)

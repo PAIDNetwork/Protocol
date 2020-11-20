@@ -105,6 +105,13 @@ findDecisionFromAgreementFacts { <br/>
 
 Then, each decision-making contract, based on the pre-defined conditions in the Smart Agreements previously, according to the selected template.
 
+<!-- debe incluir
+- Prereq codificados basado en VC Model
+- did-dpki
+- Condiciones y Reglas (esta JEXL based)
+- Cortes y Arbitrajes mapeados o lookup por medio de DID Services
+--->
+
 #### **Resolutions, courts and disputes**
 
 Each decision-making contract, depending on the template and the conditions set forth in them, to make resolutions, resolve disputes or the handling of imponderables that must be handled by hybrid or physical courts outside the scope of the contract but defined within it as a oracle to handle such disagreements between signature parties.
@@ -123,22 +130,10 @@ After this secondary network of Smart Routers has guaranteed the legitimacy of t
 
 All this supported by standards such as EIP712, for meta transactions sign with ECDSA, Decentralized Identifier with EdDSA Keypairs and Biometric Verification offchain.
 
-### **Introducing did-dpki, a decentralized identity method for PAID network**
-
-PAID Smart Agreements (Proposal DID-DPKI-v1) need verifiable proof of identity to work well with legal contracts. Legal contracts, because they are binding, need a way to ensure all parties are accountable under a jurisdiction. In a simple legal agreement workflow, a off-chain KYC solution might be enough. But considering PAID Smart Agreements is a decentralized based protocol, using smart contracts and oracles, we'll need a good set of technology stack that supports enough data sources and still keep the level of decentralization required, being the ideal gateway to manage contracts in the real world through legally recognized structures and Ricardian Contract provided by services such as that offered by PAID Smart Agreements
-
-
-### **PAID Oracles, Incentivized Oracles and other constructs**
-
-PAID Smart Agreements, in a first phase, foresees the use of oracles to improve the quality in the verification of credentials and the attestation of the physical and legal location of the signature Parties of the Smart Agreements, thus improving the level of security and precision of the data provided by users and verified by the platform, guaranteeing their legitimacy.
-
-PAID Smart Agreements, in a second phase, provides for the management of an incentive model for users of the protocol, allowing them to share aspects of the use of the platform such as reputation, transparency and compliance index in the execution of Smart Agreements made in the same, without of course being violated aspects such as the security and privacy of the information, the users having control of the data at all times, which will or will not be shared through Oracles and other constructs.
-
-### **PAID Token**
-
-PAID Smart Agreements Token, have a capacity to handle diferents type of token, with backward to ERC 20 and ERC 223, and to interface with offchain securities like SAFTs, follow the Claims Token Standard ERC-1843 ana the Simple Restricted Token Standard ERC1404. 
-
-It eventually allows in the first stage, it to be the ideal gateway DeFi and OpenFinance ecosystem assets including staking, insurance and escrow, allowing users to complete business agreement process from beginning to end through the platform. These assets incur future cash flows, e.g. repayments or dividends. Currently there is no standard for efficiently distributing claims on future cash flow of financial contracts among token holders. A clear and simple standard is needed to allow Dapps and exchanges to work with cash-flow producing tokens
+<!---  TODO 
+> - Ejemplo del Smart Router, given a DID method/service eg court service
+> - Por ahora, Rules builtin en la plantilla con JEXL, estos rules, investiga max 4h y me reportas si podemos  mapearlo a RLP y/o EIP712
+> - Trabaja con Patricia, el schema final draft 0.1 --->
 
 ### **Summary**
 
@@ -155,5 +150,4 @@ By maintaining developer efficient processes, putting Proof of Identity and Proo
 - [DID Specification Registries](https://w3c.github.io/did-spec-registries/)
 - [Delaware Limited Liability Company](https://www.cscglobal.com/service/cls/delaware-llc-guide/)
 - [DID (Decentralized Identifier) Specification](https://github.com/WebOfTrustInfo/rwot3-sf/blob/master/topics-and-advance-readings/did-spec-working-draft-03.md)
-- [Biometric epassport](https://en.wikipedia.org/wiki/Biometric_passport)
 - [Ricardian contract](https://en.wikipedia.org/wiki/Ricardian_contract)
