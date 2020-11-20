@@ -1,7 +1,6 @@
-# PAID Protocol (DID-DPKI Proposal v1)
+# PAID Smart Agreements Protocol (DID-DPKI Proposal v1)
 
 ## Chapter 1 - Verifiable credentials, attestations, proof, quorum signatures and oraclized data feeds
-
 
 ### Smart Agreements
 
@@ -25,7 +24,7 @@ Attestations must be single clause and composable. They are either part of VC or
  - country and region (encoded under the ISO 3166 standard for storage in a Solidity Contract).
  - rating (non-accredited, accredited, QIB, etc.varies by issuer & jurisdiction)
  - One or more public blockchain addresses a required renewal date.
- - the KECCAK256 hash of a subset of the  foregoing PII (the IDHash)
+ - the ECDSAsecp256k1/EdDSA25519 hash of a subset of the  foregoing PII (the IDHash)
 
 An example of a birth certificate clause might be eg Are you older than 18?, this attestation, because is a precondition, is attested off-chain with traditional APIs instead of using on-chain transactions. It means most of a smart agreement prerequisites will be proofs inside a Verifiable Credentials model. These proofs can also be used in conjuction Zero Knowledge technology.
 
@@ -67,7 +66,7 @@ An example of a birth certificate clause might be eg Are you older than 18?, thi
 A Smart Agreements is build using the Verifiable Credentials, and contains:
 
 - A set of one more `Prerequisites` (see Attestations)
-- A set of Agreement `Conditions`, which can be DOM tagged (see Solido EVM Forms)
+- A set of Agreement `Conditions`, which can be DOM tagged (see JSON Schema and Meta transacciones)
 - A set of resolutions which are mapped to a court and dispute Smart Contracts representing a DAO like construct.
 
 A `PAID Smart Agreement` is then based of a root JSON Schema and inherited schemas, these specific for each industry.
@@ -105,7 +104,9 @@ Then, each decision-making contract, based on the pre-defined conditions in the 
 
 #### **Resolutions, courts and disputes**
 
-Each decision-making contract, in function of the resolutions, disputes or management of imponderables that must be handled by cutting hybrids or physics outside the scope of the contract but defined in it as an oracle to handle disputes, all this is created as a meta transaction and uses EIP712
+Each decision-making contract, depending on the resolutions, disputes or handling of imponderables that must be handled hybrid or physical courts outside the scope of the contract but defined in it as an oracle to handle disputes.
+
+All this logic will be handled from the selected contract template, and the events adjusted based on the meta transaction and uses EIP712, to indicate to the Smart Routers the actions to be executed according to the pre-established conditions in the Smart Agreements.
 
 1. EIP712 Domain Name -- LeasingDecisionMaker
 2. EIP712 Method implemented -- PenaltyforLatePayment()
@@ -113,8 +114,11 @@ Each decision-making contract, in function of the resolutions, disputes or manag
 
 ### **Smart Routers, math constructs and digital signatures**
 
-PAID Smart Agreements, 
+PAID Smart Agreements, do not interact directly with the smart contracts deployed in onchain, instead it connects with a secondary network that in addition to performing the corresponding credential verifications to guarantee my identity through my signature (s) will verify others Security elements already mentioned as part of PAID Smart Agreements that allow guaranteeing that each interaction is secure after executing actions within the PAID Smart Agreements.
 
+After this secondary network of Smart Routers has guaranteed the legitimacy of the communication between the signature Parties and the Smart Agreements, they will allow the execution of the actions pre-established by the signature Parties in said Smart Agreements, guaranteeing the assurance of the communication and the identity of the same without compromising your privacy.
+
+All this supported by standards such as EIP712, for meta transactions sign with ECDSA, Decentralized Identifier with EdDSA Keypairs and Biometric Verification offchain.
 
 ### **Introducing did-dpki, a decentralized identity method for PAID network**
 
@@ -123,7 +127,9 @@ PAID Smart Agreements (Proposal DID-DPKI-v1) need verifiable proof of identity t
 
 ### **PAID Oracles, Incentivized Oracles and other constructs**
 
+PAID Smart Agreements, in a first stage, foresees the use of oracles to improve the quality in the verification of credentials and the attestation of the physical and legal location of the signature Parties of the Smart Agreements, thus improving the level of security and precision of the data provided by users and verified by the platform, guaranteeing their legitimacy.
 
+PAID Smart Agreements, in a third stage, provides for the management of an incentive model for users of the protocol, allowing them to share aspects of the use of the platform such as reputation, transparency and compliance index in the execution of Smart Agreements made in the same, without of course being violated aspects such as the security and privacy of the information, the users having control of the data at all times, which will or will not be shared through Oraculos and other constructs.
 
 ### **PAID Token**
 
@@ -131,7 +137,7 @@ PAID Smart Agreements Token, have a capacity to handle differents type of token,
 
 ### **Summary**
 
-By maintaining developer efficient processes, putting Proof of Identity and Proof of Address allows our smart agreements protocol, to have near identical set of requirements as those found in a KYC solution. At the same time, it doesn't disrupt the CA business, it expands the CA and digital signing for vendors. In future protocol upgrades, an incentivization model could be added to make eg a reputation voting system, to be able to have another layer of trust.
+By maintaining developer efficient processes, putting Proof of Identity and Proof of Address allows our PAID Smart Agreements Protocol, to have near identical set of requirements as those found in a KYC solution. At the same time, it doesn't disrupt the CA business, it expands the CA and digital signing for vendors. In future protocol upgrades, an incentivization model could be added to make eg a reputation voting system, to be able to have another layer of trust.
 
 ### **References**
 

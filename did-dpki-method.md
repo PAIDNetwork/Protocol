@@ -62,7 +62,7 @@
  
  #### *Option 2 - Smart Contract*
  
- A Smart Contract in Polkadot can issue ECDSA keypairs. And either using EVM or Polkadot, be able to verify ECDSA keypairs onchain.
+ A Smart Contract in Polkadot can issue EdDSA keypairs. And either using EVM or Polkadot, be able to verify EdDSA keypairs onchain.
  
  #### **Proof of Country** *(How two-step authentication)*
 
