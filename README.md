@@ -1,10 +1,10 @@
-# PAID Smart Agreements Protocol 
+# **PAID Smart Agreements Protocol**
 
-## Chapter 1 - Verifiable credentials, attestations, proof of citizenship and smart agreements.
+## **Chapter 1 - Verifiable credentials, attestations, proof of citizenship and smart agreements.**
 
-### Smart Agreements
+### **Smart Agreements**
 
-#### Attestations
+#### **Attestations**
 An attestation is a proof issued by an attester or issuer, either human, smart contract or API.
 
 *The attestation model for PAID* uses W3C Verifiable Credentials Model with JSON Schemas packed as JWT. This allows us to use JWT basic features like aud, iss, nbf, exp and others sub
@@ -17,7 +17,7 @@ An attestation is a proof issued by an attester or issuer, either human, smart c
 
 Attestations must be single clause and composable. They are either part of VC or subset of VC Model, JSON Schemas converted to JWT using `did-jwt`, in order to provide a self-contained token that can be optionally signed using JSON Web Signature (JWS) and/or encrypted using JSON Web Encryption (JWE).
 
-## Components of Attestations
+#### **Components of Attestations**
  Proof issued by attesters (ie issuer attests a set of attributes or values, KYC like).
 
  - Full Legal Name.
@@ -29,7 +29,7 @@ Attestations must be single clause and composable. They are either part of VC or
 An example of a birth certificate clause might be eg Are you older than 18?, this attestation, because is a precondition, is attested off-chain with traditional APIs instead of using on-chain transactions. It means most of a Smart Agreement prerequisites will be proofs inside a Verifiable Credentials model. These proofs can also be used in conjunction Zero Knowledge technology.
 
 
-## Example of VC Model using Javascript
+## **Example of VC Model using Javascript**
 ```javascript
 {
   "@context": [
@@ -61,7 +61,7 @@ An example of a birth certificate clause might be eg Are you older than 18?, thi
 }}
 
 ```
-#### Agreements
+#### **Agreements**
 
 A Smart Agreements is build using the Verifiable Credentials, and contains:
 
@@ -79,9 +79,9 @@ Thus, a PAID Smart Agreement is:
 - Decentralized Identity DID compatible
 
 To make Solidity Smart Contract make decisiones using a rules engine like code, we classify or transform a matrix of options to boolean.
-
-##### **Use Case / Example 1 -  Limited Liability Autonomous Organizations**
-
+<br/>
+#### **Use Case / Example 1 -  Limited Liability Autonomous Organizations**
+<br/>
 The PAID Smart Agreements allow an organization where the management of digital assets as a representation of physical assets to carry out agreements of a different nature where the verification of credentials of the signatories of the agreements is required, in addition to the attestation of the data indicated in the moment of entering into such agreements. In addition to allowing the verification of the legal jurisdiction of the signatories and validating it with that of the conclusion of the contract.
 
 PAID Smart Agreements, allows the verification of credentials in a decentralized way and with the use of APIs and Oracles available for these functions, taking advantage of incentive schemes such as DeFi and Chainlink, allowing the attestation of (see Components of attestations)
@@ -107,9 +107,10 @@ Then, each decision-making contract, based on the pre-defined conditions in the 
 - Condiciones y Reglas (esta JEXL based)
 - Cortes y Arbitrajes mapeados o lookup por medio de DID Services
 --->
+<br/>
 
 #### **Resolutions, courts and disputes**
-
+<br/>
 Each decision-making contract, depending on the template and the conditions set forth in them, to make resolutions, resolve disputes or the handling of imponderables that must be handled by hybrid or physical courts outside the scope of the contract but defined within it as a oracle to handle such disagreements between signature parties.
 
 All this logic will be managed from the selected Smart Agreements template, and the particular conditions or events adjusted and sent through meta-transactions based on the EIP712 standard, to the Smart Routers with the actions to be executed according to the conditions and events. pre-established in the Smart Agreements. eg.:
@@ -124,10 +125,13 @@ All this logic will be managed from the selected Smart Agreements template, and 
 > - Trabaja con Patricia, el schema final draft 0.1 --->
 
 ### **Summary**
-
+<br/>
 By maintaining developer efficient processes, putting Proof of Identity and Proof of Citizenship allows our PAID Smart Agreements Protocol, to have near identical set of requirements as those found in a KYC solution. At the same time, it doesn't disrupt the CA business, it expands the CA and digital signing for vendors. In future protocol upgrades, an incentivization model could be added to make eg a reputation scoring and voting system, to be able to have another layer of trust.
+<br/>
+<br/>
 
 ### **References**
+<br/>
 
 - [ISO 3166 COUNTRY CODES](https://www.iso.org/iso-3166-country-codes.html)
 - [Verifiable Credentials Data Model 1.0](https://www.w3.org/TR/vc-data-model/)
