@@ -1,6 +1,6 @@
 # PAID Smart Agreements Protocol 
 
-## Chapter 1 - Verifiable credentials, attestations, proof, quorum signatures and oraclized data feeds
+## Chapter 1 - Verifiable credentials, attestations, proof of citizenship and smart agreements.
 
 ### Smart Agreements
 
@@ -121,14 +121,6 @@ All this logic will be managed from the selected Smart Agreements template, and 
 1. EIP712 Domain Name -- LeasingDecisionMaker
 2. EIP712 Method implemented -- PenaltyforLatePayment()
 3. Pending define eg a. signed(hash [0,0]) === signed(address)
-
-### **Smart Routers, math constructs and digital signatures**
-
-PAID Smart Agreements, do not interact directly with the smart contracts deployed in onchain, instead it connects with a secondary network that in addition to performing the corresponding credential verifications to guarantee my identity through my signature (s) will verify others Security elements already mentioned as part of PAID Smart Agreements that allow guaranteeing that each interaction is secure after executing actions within the PAID Smart Agreements.
-
-After this secondary network of Smart Routers has guaranteed the legitimacy of the communication between the signature Parties and the Smart Agreements, they will allow the execution of the actions pre-established by the signature Parties in said Smart Agreements, guaranteeing the assurance of the communication and the identity of the same without compromising your privacy.
-
-All this supported by standards such as EIP712, for meta transactions sign with ECDSA, Decentralized Identifier with EdDSA Keypairs and Biometric Verification offchain.
 
 <!---  TODO 
 > - Ejemplo del Smart Router, given a DID method/service eg court service
