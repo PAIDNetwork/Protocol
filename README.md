@@ -97,8 +97,12 @@ Because a contract can contain myriads of terms and conditions, a condition bein
 Then you could send it to Smart Routing:
 
 findDecisionFromAgreementFacts { <br/>
-  smartAgreement, // as metadata oracleFacts
-  // has Alice accept a penalty for late payment to Bob, // from real time data sources = yes // anyExistingSignatures <br/>
+<br/>
+  smartAgreement, // as metadata oracleFacts <br/>
+  // has Alice accept a penalty for late payment to Bob, <br/>
+  // from real time data sources = yes <br/>
+  // anyExistingSignatures <br/>
+<br/>
 }
 
 Then, each decision-making contract, based on the pre-defined conditions in the Smart Agreements previously, according to the selected template.
