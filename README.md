@@ -18,11 +18,12 @@ An attestation is a proof issued by an attester or issuer, either human, smart c
 Attestations must be single clause and composable. They are either part of VC or subset of VC Model, JSON Schemas converted to JWT using `did-jwt`, in order to provide a self-contained token that can be optionally signed using JSON Web Signature (JWS) and/or encrypted using JSON Web Encryption (JWE).
 
 ## Components of Attestations
- Proof issued by attesters (ie issuer attests a set of attributes or values).
+ Proof issued by attesters (ie issuer attests a set of attributes or values, KYC like).
 
  - Full Legal Name.
- - country and region (encoded under the ISO 3166 standard for storage in a Solidity Contract).
- - rating (non-accredited, accredited, QIB, etc.varies by issuer & jurisdiction).
+ - Date and Place of Birth.
+ - Country and Region (encoded under the ISO 3166 standard for storage in a Solidity Contract).
+ - Rating (non-accredited, accredited, QIB, etc.varies by issuer & jurisdiction).
  - One or more public blockchain addresses a required renewal date.
 
 An example of a birth certificate clause might be eg Are you older than 18?, this attestation, because is a precondition, is attested off-chain with traditional APIs instead of using on-chain transactions. It means most of a Smart Agreement prerequisites will be proofs inside a Verifiable Credentials model. These proofs can also be used in conjunction Zero Knowledge technology.
@@ -76,7 +77,6 @@ Thus, a PAID Smart Agreement is:
 - Has the full JSON schema specs, which includes extensions using other schemas, where each schema permit to the protocol taken a right decision based in a algorithm preestablished.
 - Verifiable Credentials compatible
 - Decentralized Identity DID compatible
-- Reputation Score.
 
 To make Solidity Smart Contract make decisiones using a rules engine like code, we classify or transform a matrix of options to boolean.
 
@@ -84,13 +84,9 @@ To make Solidity Smart Contract make decisiones using a rules engine like code, 
 
 The PAID Smart Agreements allow an organization where the management of digital assets as a representation of physical assets to carry out agreements of a different nature where the verification of credentials of the signatories of the agreements is required, in addition to the attestation of the data indicated in the moment of entering into such agreements. In addition to allowing the verification of the legal jurisdiction of the signatories and validating it with that of the conclusion of the contract.
 
-PAID Smart Agreements, allows the verification of credentials in a decentralized way and with the use of APIs and Oracles available for these functions, taking advantage of incentive schemes such as DeFi and Chainlink, allowing the attestation of:
-- Full Legal Name
-- Country and Region
-- A Biometric / PKI infrastructure how two-step authentication
-- Decentralized Identity DID supported
+PAID Smart Agreements, allows the verification of credentials in a decentralized way and with the use of APIs and Oracles available for these functions, taking advantage of incentive schemes such as DeFi and Chainlink, allowing the attestation of (see Components of attestations)
 
-Because a contract can contain myriads of terms and conditions, a condition being a boolean value or some other value that requires ML data like classification.
+Because a Smart Agreements can contain myriads of terms and conditions, a condition being a boolean value or some other value that requires ML data like classification.
 
 Then you could send it to Smart Routing:
 
@@ -129,7 +125,7 @@ All this logic will be managed from the selected Smart Agreements template, and 
 
 ### **Summary**
 
-By maintaining developer efficient processes, putting Proof of Identity and Proof of Country allows our PAID Smart Agreements Protocol, to have near identical set of requirements as those found in a KYC solution. At the same time, it doesn't disrupt the CA business, it expands the CA and digital signing for vendors. In future protocol upgrades, an incentivization model could be added to make eg a reputation scoring and voting system, to be able to have another layer of trust.
+By maintaining developer efficient processes, putting Proof of Identity and Proof of Citizenship allows our PAID Smart Agreements Protocol, to have near identical set of requirements as those found in a KYC solution. At the same time, it doesn't disrupt the CA business, it expands the CA and digital signing for vendors. In future protocol upgrades, an incentivization model could be added to make eg a reputation scoring and voting system, to be able to have another layer of trust.
 
 ### **References**
 
