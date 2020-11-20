@@ -1,11 +1,11 @@
  ## did-dpki
 
- ### A did method to verify identity and residence using pluggable authentication sources
+ ### A did method to verify identity using Domain Verification with Certificate Authorities and Proof of Address with MTRD for Offline Two-Factor validation
 
 
  ### Why did-dpki
 
- PAID Smart Agreements need verifiable proof of identity to work well with legal contracts. Legal contracts, because they are binding, need a way to ensure all parties are accountable under a jurisdiction. In a simple legal agreement workflow, a KYC solution might be enough. But considering PAID is a decentralized based protocol, using smart contracts and oracles, we'll need a good set of technology stack that supports  enough data sources and still keep the level of decentralization required.
+ PAID Smart Agreements need verifiable proof of identities to work well with legal contracts. Legal contracts, because they are binding, need a way to ensure all parties are accountable under a jurisdiction. In a simple legal agreement workflow, a KYC solution might be enough. But considering PAID is a decentralized based protocol, using smart contracts and oracles, we'll need a good set of technology stack that supports  enough data sources and still keep the level of decentralization required.
  
  ### Proposal
  
@@ -36,10 +36,12 @@
  - rating (non-accredited, accredited, QIB, etc.varies by issuer & jurisdiction)
  - One or more public blockchain addresses a required renewal date.
  - the KECCAK256 hash of a subset of the  foregoing PII (the IDHash)
+ 
+ This is inpired by `ZeroAugmentation Whitepaper` and is used to verify identities in DAO smart contracts and/or LAO contracts.
 
  #### **JSON Schema**
 
- A JSON Schema construct, Has the full JSON schema specs, which includes extensions using other schemas with a Verifiable Credentials and compatible `Decentralized Identity DID compatible (W3C)`
+ A JSON Schema construct, Has the full JSON schema specs, which includes extensions using other schemas with a Verifiable Credentials and compatible `Decentralized Identity DID compatible (W3C)`. Proposes JSON schema includes PAID properties and ZeroAugmentation Model, this model must have Anonymous Credentials zero knowledge privacy features.
  
  #### **P384 or secp256r1**
  
@@ -64,13 +66,13 @@
  
  A Smart Contract in Polkadot can issue EdDSA keypairs. And either using EVM or Polkadot, be able to verify EdDSA keypairs onchain.
  
- #### **Proof of Country** *(How two-step authentication)*
+ #### **Proof of Country** *(Two-factor validation)*
 
  A biometric passport (also known as an e-passport, ePassport, or a digital passport) is a traditional passport that has an embedded electronic microprocessor chip which contains biometric information that can be used to authenticate the identity of the passport holder. With this information we have an off-chain attestation of the data provided by the users in the verifiable Credentials, guaranteeing an additional verification (proof) of the user's data and the legal location of the protocol user.
  
  ### **Summary**
  
- By maintaining developer efficient processes, putting Proof of Identity and Proof of Address allows our smart agreements protocol, to have near identical set of requirements as those found in a KYC solution. At the same time, it doesn't disrupt the CA business, it expands the CA and digital signing for vendors. In future protocol upgrades, an incentivization model could be added to make eg a reputation voting system, to be able to have another layer of trust.
+ By maintaining low cost approach and using existing technology infrastructure as IPFS, IPNS, Let's Encrypt, DAO, LAOs allows us to use Proof of Identity and Proof of Address in PAID smart agreements protocol, to have near identical set of requirements as those found in a KYC solution. At the same time, it doesn't disrupt the CA business, it expands the CA and digital signing for vendors. In future protocol upgrades, an incentivization model could be added to make eg a reputation voting system, to be able to have another layer of trust.
  
  ### References
  
