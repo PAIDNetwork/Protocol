@@ -25,8 +25,9 @@ Attestations must be single clause and composable. They are either part of VC or
  - rating (non-accredited, accredited, QIB, etc.varies by issuer & jurisdiction)
  - One or more public blockchain addresses a required renewal date.
  - the EdDSA25519 hash of a subset of the  foregoing PII (the IDHash)
+ - A Biometric/PKI infraestructura how two-step authentication (offchain)
 
-An example of a birth certificate clause might be eg Are you older than 18?, this attestation, because is a precondition, is attested off-chain with traditional APIs instead of using on-chain transactions. It means most of a smart agreement prerequisites will be proofs inside a Verifiable Credentials model. These proofs can also be used in conjuction Zero Knowledge technology.
+An example of a birth certificate clause might be eg Are you older than 18?, this attestation, because is a precondition, is attested off-chain with traditional APIs instead of using on-chain transactions. It means most of a Smart Agreement prerequisites will be proofs inside a Verifiable Credentials model. These proofs can also be used in conjuction Zero Knowledge technology.
 
 
 ## Example of VC Model using Javascript
@@ -67,7 +68,7 @@ A Smart Agreements is build using the Verifiable Credentials, and contains:
 
 - A set of one more `Prerequisites` (see Attestations)
 - A set of Agreement `Conditions`, which can be DOM tagged (see JSON Schema and Meta transacciones)
-- A set of resolutions which are mapped to a court and dispute Smart Contracts representing a DAO like construct.
+- A set of resolutions which are mapped to a court and dispute Smart Contracts representing a DAO/LAO like construct.
 
 A `PAID Smart Agreement` is then based of a root JSON Schema and inherited schemas, these specific for each industry.
 
@@ -95,8 +96,8 @@ Because a contract can contain myriads of terms and conditions, a condition bein
 
 Then you could send it to Smart Routing:
 
-findDecisionFromAgreementFacts { 
-  - smartAgreement, // as metadata oracleFacts
+findDecisionFromAgreementFacts { <br/>
+  smartAgreement, // as metadata oracleFacts
   // has Alice accept a penalty for late payment to Bob, // from real time data sources = yes // anyExistingSignatures <br/>
 }
 
