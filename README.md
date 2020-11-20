@@ -87,7 +87,7 @@ To make Solidity Smart Contract make decisiones using a rules engine like code, 
 The PAID Smart Agreements allow an organization where the management of digital assets as a representation of physical assets to carry out agreements of a different nature where the verification of credentials of the signatories of the agreements is required, in addition to the attestation of the data indicated in the moment of entering into such agreements. In addition to allowing the verification of the legal jurisdiction of the signatories and validating it with that of the conclusion of the contract.
 
 PAID Smart Agreements, allows the verification of credentials in a decentralized way and with the use of APIs and Oracles available for these functions, taking advantage of incentive schemes such as DeFi and Chainlink, allowing the attestation of:
-- full legal name
+- Full Legal Name
 - Country and Region
 - A Biometric / PKI infrastructure how two-step authentication
 - Decentralized Identity DID supported
