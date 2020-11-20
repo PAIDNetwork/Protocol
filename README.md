@@ -26,7 +26,6 @@ Attestations must be single clause and composable. They are either part of VC or
  - One or more public blockchain addresses a required renewal date.
  - the EdDSA25519 hash of a subset of the  foregoing PII (the IDHash).
  - A Biometric/PKI infraestructura how two-step authentication (offchain).
- - Reputation scoring system.
 
 An example of a birth certificate clause might be eg Are you older than 18?, this attestation, because is a precondition, is attested off-chain with traditional APIs instead of using on-chain transactions. It means most of a Smart Agreement prerequisites will be proofs inside a Verifiable Credentials model. These proofs can also be used in conjunction Zero Knowledge technology.
 
@@ -80,6 +79,7 @@ Thus, a PAID Smart Agreement is:
 - Verifiable Credentials compatible
 - A Biometric/PKI infraestructura how two-step authentication
 - Decentralized Identity DID compatible
+- Reputation Score.
 
 To make Solidity Smart Contract make decisiones using a rules engine like code, we classify or transform a matrix of options to boolean.
 
