@@ -80,15 +80,24 @@ Thus, a PAID Smart Agreement is:
 
 To make Solidity Smart Contract make decisiones using a rules engine like code, we classify or transform a matrix of options to boolean.
 <br/>
+
 #### **Use Case / Example 1 -  Limited Liability Autonomous Organizations**
+
 <br/>
-The PAID Smart Agreements allow an organization where the management of digital assets as a representation of physical assets to carry out agreements of a different nature where the verification of credentials of the signatories of the agreements is required, in addition to the attestation of the data indicated in the moment of entering into such agreements. In addition to allowing the verification of the legal jurisdiction of the signatories and validating it with that of the conclusion of the contract.
 
-PAID Smart Agreements, allows the verification of credentials in a decentralized way and with the use of APIs and Oracles available for these functions, taking advantage of incentive schemes such as DeFi and Chainlink, allowing the attestation of (see Components of attestations)
+The PAID Smart Agreements allow an organization where the management of digital assets as a representation of physical assets carry out agreements of a different nature where the verification of credentials of the signatories of the agreements is required. In addition to the attestation of the data indicated at the time of entering into said agreements and allowing the verification of the legal jurisdiction of the signatories and validating it with that of the conclusion of the contract.
+<br/>
 
-Because a Smart Agreements can contain myriads of terms and conditions, a condition being a boolean value or some other value that requires ML data like classification.
+Paid Smart Agreement, allows the verification of credentials through a Decentralized Digital Identity, based on the W3C standard, and a DID METHOD developed by PAID, as a standard identifier candidate within the experimental exercise that the W3C is doing together with the Web 3 Foundation, for the evolution of the entire Blockchain Ecosystem and the Management of Decentralized Identification Systems. The `did:dpki`, is a DID Method, inspired by `did:ether` and additionally works the native library of the W3C `did-jwt`, allowing the encoding and decoding with multiple algorithms such as JsonWebKey2020 or Ed25519VerificationKey2018.
+<br/>
 
-Then you could send it to Smart Routing:
+Additionally Paid Smart Agreement, allows the establishment of conditions and validation of events or calls for execution, through a standard technology for sending gas-less transactions (`EP-712`) to smart contracts and with a scheme that allows the conversion of the conditions of the conditions of the Physical Contract in a Pseudo Code (`JEXL`/`Java Expression Language`) understandable for the Smart Contract corresponding to the pre-established template at the time of creation, fulfilling the conditions of the Ricardian Contract.
+<br/>
+
+Because smart agreements can contain numerous terms and conditions, a condition is a Boolean value or some other value that requires data machine learning for classification purposes, then it is transformed into a compressible language for smart contract (RLP Like) , and sent by meta-transactions the same for the execution of functions and events correspond to the information submitted, and actions preset template in the Smart Contract.
+<br/>
+
+Then you could send it to Smart Routing (`Smart Contract predefined according to the templates available and the courts or arbitration courts selected for its execution`):
 
 findDecisionFromAgreementFacts { <br/>
 <br/>
@@ -100,24 +109,24 @@ findDecisionFromAgreementFacts { <br/>
 }
 
 Then, each decision-making contract, based on the pre-defined conditions in the Smart Agreements previously, according to the selected template.
-
+<br/>
 <!-- debe incluir
 - Prereq codificados basado en VC Model
 - did-dpki
 - Condiciones y Reglas (esta JEXL based)
 - Cortes y Arbitrajes mapeados o lookup por medio de DID Services
 --->
-<br/>
+
 
 #### **Resolutions, courts and disputes**
-<br/>
+
 Each decision-making contract, depending on the template and the conditions set forth in them, to make resolutions, resolve disputes or the handling of imponderables that must be handled by hybrid or physical courts outside the scope of the contract but defined within it as a oracle to handle such disagreements between signature parties.
+<br/>
 
-All this logic will be managed from the selected Smart Agreements template, and the particular conditions or events adjusted and sent through meta-transactions based on the EIP712 standard, to the Smart Routers with the actions to be executed according to the conditions and events. pre-established in the Smart Agreements. eg.:
+Additionally, Paid Smart Agreement, allows through Verifiable Credentials and executed the two-step authentication `Proof of Citizenship`, together with the preselected template at the time of establishing the contract between the parties, to validate and define as viable a jurisdiction for the resolution of controversies and / or disputes in the execution of said contract. Allowing that prior to the selection of the court or court to define for the handling of disputes, it can be verified that the signature parties have the legal quality to participate in said litigation, eg. such as nationality or legal residence in that region or country. , to which the selected court belongs.
+<br/>
 
-1. EIP712 Domain Name -- LeasingDecisionMaker
-2. EIP712 Method implemented -- PenaltyforLatePayment()
-3. Pending define eg a. signed(hash [0,0]) === signed(address)
+Along with this PAID Smart Agreement proposed to offer a mapping or lookup system that allows offering signature parties, Courts or Arbitration Courts the most appropriate according to the type of pre-selected template and the result of the execution of the two-step verification. authentication `Proof of Citizenship`, facilitating its selection by users of the protocol <br/>
 
 <!---  TODO 
 > - Ejemplo del Smart Router, given a DID method/service eg court service
