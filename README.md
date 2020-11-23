@@ -51,6 +51,7 @@ An example of a birth certificate clause might be eg Are you older than 18?, thi
       "college": "College of Engineering"
     }
   },
+  ""
   "proof": {
     "type": "CLSignature2019",
     "issuerData": "5NQ4TgzNfSQxoLzf2d5AV3JNiCdMaTgm...BXiX5UggB381QU7ZCgqWivUmy4D",
@@ -81,11 +82,11 @@ Thus, a PAID Smart Agreement is:
 To make Solidity Smart Contract make decisiones using a rules engine like code, we classify or transform a matrix of options to boolean.
 <br/>
 
-#### **Use Case / Example 1 -  Limited Liability Autonomous Organizations**
+#### **Use Case / Example 1 - Mutual Non Disclosure Agreement **
 
 <br/>
 
-The PAID Smart Agreements allow an organization where the management of digital assets as a representation of physical assets carry out agreements of a different nature where the verification of credentials of the signatories of the agreements is required. In addition to the attestation of the data indicated at the time of entering into said agreements and allowing the verification of the legal jurisdiction of the signatories and validating it with that of the conclusion of the contract.
+Paid Smart Agreements allow an organization where the management of digital assets as a representation of entities and physical assets, allows carrying out agreements of a different nature where the verification of credentials of the signatories of the agreements is required. In addition to the attestation of the data indicated at the time of entering into said agreements and that allows verifying the legal jurisdiction of the signatories and validating it with that of the conclusion of the contract.
 <br/>
 
 Paid Smart Agreement, allows the verification of credentials through a Decentralized Digital Identity, based on the W3C standard, and a DID METHOD developed by PAID, as a standard identifier candidate within the experimental exercise that the W3C is doing together with the Web 3 Foundation, for the evolution of the entire Blockchain Ecosystem and the Management of Decentralized Identification Systems. The `did:dpki`, is a DID Method, inspired by `did:ether` and additionally works the native library of the W3C `did-jwt`, allowing the encoding and decoding with multiple algorithms such as JsonWebKey2020 or Ed25519VerificationKey2018.
@@ -99,12 +100,13 @@ Because smart agreements can contain numerous terms and conditions, a condition 
 
 Then you could send it to Smart Routing (`Smart Contract predefined according to the templates available and the courts or arbitration courts selected for its execution`):
 
-findDecisionFromAgreementFacts { <br/>
+findDecisionFromAgreementFacts {
 <br/>
+
   smartAgreement, // as metadata oracleFacts <br/>
   signed(hash [1,0]) // has Alice accept a penalty for late payment to Bob `[Alice, Bod]`, <br/>
   PayOnTime() == false // from real time data sources = yes <br/>
-  ExecutePenalty(Alice) // anyExistingSignatures <br/>
+  ExecutePenalty(Alice) // anyExistingSignatures
 <br/>
 }
 
@@ -116,7 +118,6 @@ Then, each decision-making contract, based on the pre-defined conditions in the 
 - Condiciones y Reglas (esta JEXL based)
 - Cortes y Arbitrajes mapeados o lookup por medio de DID Services
 --->
-
 
 #### **Resolutions, courts and disputes**
 
