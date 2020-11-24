@@ -44,7 +44,7 @@ An example of a birth certificate clause might be eg Are you older than 18?, thi
     "id": "did:example:123",
     "type": [
       "NonDisclosureAgreement",
-      "Discloser"
+      "Discloser",
     ],
     "givenName": "JOHN",
     "familyName": "SMITH",
@@ -52,13 +52,13 @@ An example of a birth certificate clause might be eg Are you older than 18?, thi
     "Discloser": "did:dpki:0x51587De731f94b69d9f956d9C736EE5B0153a170",
     "residentSince": "2015-01-01",
     "birthCountry": "Bahamas",
-    "birthDate": "1958-08-17"
+    "birthDate": "1958-08-17",
   },
   "credentialSubjectB": {
     "id": "did:example:123",
     "type": [
       "NonDisclosureAgreement",
-      "Recipient"
+      "Recipient",
     ],
     "givenName": "MARIA",
     "familyName": "STARK",
@@ -66,29 +66,29 @@ An example of a birth certificate clause might be eg Are you older than 18?, thi
     "recipient": "did:dpki:0x6b3Ce64891c4D9c5C2E0072Ff682b1266497e448",
     "residentSince": "2015-01-01",
     "birthCountry": "Panama",
-    "birthDate": "1958-08-17"
+    "birthDate": "1958-08-17",
   },
   "conditions": {
     "Events": {
       "Notices": {
         "Discloser": "did:dpki:0x51587De731f94b69d9f956d9C736EE5B0153a170",
         "recipient": "did:dpki:0x6b3Ce64891c4D9c5C2E0072Ff682b1266497e448",
-        "Message": "Message with detail of the notification form to be made within the contract"
+        "Message": "Message with detail of the notification form to be made within the contract",
         },
       "ReturnOfMetarials": {
         "Discloser": "did:dpki:0x51587De731f94b69d9f956d9C736EE5B0153a170",
         "recipient": "did:dpki:0x6b3Ce64891c4D9c5C2E0072Ff682b1266497e448",
-        "Message": "Message with detail of the deadline to returns of materials or documents that have been furnished by Discloser to Recipient, within ten (10) days after (a) the Relationship has been rejected or concluded"
+        "Message": "Message with detail of the deadline to returns of materials or documents that have been furnished by Discloser to Recipient, within ten (10) days after (a) the Relationship has been rejected or concluded",
       },
       "ReturnOfMetarialsFail": {
         "Discloser": "did:dpki:0x51587De731f94b69d9f956d9C736EE5B0153a170",
         "recipient": "did:dpki:0x6b3Ce64891c4D9c5C2E0072Ff682b1266497e448",
-        "Message": "Message notify that ten (10) days after finished o rejected relationship the Recipient doesn't return all the information provided within the Non Disclosure Agreement"
+        "Message": "Message notify that ten (10) days after finished o rejected relationship the Recipient doesn't return all the information provided within the Non Disclosure Agreement",
       },
       "RejectOrFinishRelationship": {
         "Discloser": "did:dpki:0x51587De731f94b69d9f956d9C736EE5B0153a170",
         "recipient": "did:dpki:0x6b3Ce64891c4D9c5C2E0072Ff682b1266497e448",
-        "Message": "Detailed message indicating the rejection or termination of the relationship between the parties to the contract"
+        "Message": "Detailed message indicating the rejection or termination of the relationship between the parties to the contract",
       },
     }
     "Function": {
@@ -116,7 +116,13 @@ An example of a birth certificate clause might be eg Are you older than 18?, thi
       "Court": "Distrito, Los Angeles"
     },
     "Arbitration": {
-      "Arbitration": "Eg. decentralized, PAID ADR"
+      "Arbitration": {
+        "identifier": "7465",
+        "name": "PAID ADR for Non Disclouser Agreements"
+        "arbitratorA": "did:dpki:0xbda5F6Ff1dAe02b006837a8E656E9644707fcEA6",
+        "arbitratorB": "did:dpki:0x566f23F6c4F82E5B02eA110C8E816915a1893e1E",
+        "arbitratorC": "did:dpki:0xf4D867BD19635f76196654Ef311375122aE0D5f1",
+      }
     },
   },
   "issuer": "did:dpki:0xB423DD4834Be284B53d317649465d100762b838d",
