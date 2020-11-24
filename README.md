@@ -34,30 +34,102 @@ An example of a birth certificate clause might be eg Are you older than 18?, thi
 {
   "@context": [
     "https://www.w3.org/2018/credentials/v1",
-    "https://www.w3.org/2018/credentials/examples/v1"
+    "https://w3id.org/citizenship/v1"
   ],
-  "type": ["VerifiableCredential", "UniversityDegreeCredential"],
-  "credentialSchema": {
-    "id": "did:example:cdf:35LB7w9ueWbagPL94T9bMLtyXDj9pX5o",
-    "type": "did:example:schema:22KpkXgecryx9k7N6XN1QoN3gXwBkSU8SfyyYQG"
+  "type": [
+    "VerifiableCredential",
+    "NonDisclosureAgreement"
+  ],
+  "credentialSubjectA": {
+    "id": "did:example:123",
+    "type": [
+      "NonDisclosureAgreement",
+      "Discloser"
+    ],
+    "givenName": "JOHN",
+    "familyName": "SMITH",
+    "gender": "Male",
+    "Discloser": "did:dpki:0x51587De731f94b69d9f956d9C736EE5B0153a170",
+    "residentSince": "2015-01-01",
+    "birthCountry": "Bahamas",
+    "birthDate": "1958-08-17"
   },
-  "issuer": "did:example:Wz4eUg7SetGfaUVCn8U9d62oDYrUJLuUtcy619",
-  "credentialSubject": {
-    "givenName": "Jane",
-    "familyName": "Doe",
-    "degree": {
-      "type": "BachelorDegree",
-      "name": "Bachelor of Science and Arts",
-      "college": "College of Engineering"
+  "credentialSubjectB": {
+    "id": "did:example:123",
+    "type": [
+      "NonDisclosureAgreement",
+      "Recipient"
+    ],
+    "givenName": "MARIA",
+    "familyName": "STARK",
+    "gender": "Female",
+    "recipient": "did:dpki:0x6b3Ce64891c4D9c5C2E0072Ff682b1266497e448",
+    "residentSince": "2015-01-01",
+    "birthCountry": "Panama",
+    "birthDate": "1958-08-17"
+  },
+  "conditions": {
+    "Events": {
+      "Notices": {
+        "Discloser": "did:dpki:0x51587De731f94b69d9f956d9C736EE5B0153a170",
+        "recipient": "did:dpki:0x6b3Ce64891c4D9c5C2E0072Ff682b1266497e448",
+        "Message": "Message with detail of the notification form to be made within the contract"
+        },
+      "ReturnOfMetarials": {
+        "Discloser": "did:dpki:0x51587De731f94b69d9f956d9C736EE5B0153a170",
+        "recipient": "did:dpki:0x6b3Ce64891c4D9c5C2E0072Ff682b1266497e448",
+        "Message": "Message with detail of the deadline to returns of materials or documents that have been furnished by Discloser to Recipient, within ten (10) days after (a) the Relationship has been rejected or concluded"
+      },
+      "ReturnOfMetarialsFail": {
+        "Discloser": "did:dpki:0x51587De731f94b69d9f956d9C736EE5B0153a170",
+        "recipient": "did:dpki:0x6b3Ce64891c4D9c5C2E0072Ff682b1266497e448",
+        "Message": "Message notify that ten (10) days after finished o rejected relationship the Recipient doesn't return all the information provided within the Non Disclosure Agreement"
+      },
+      "RejectOrFinishRelationship": {
+        "Discloser": "did:dpki:0x51587De731f94b69d9f956d9C736EE5B0153a170",
+        "recipient": "did:dpki:0x6b3Ce64891c4D9c5C2E0072Ff682b1266497e448",
+        "Message": "Detailed message indicating the rejection or termination of the relationship between the parties to the contract"
+      },
+    }
+    "Function": {
+      "Notification": {
+        "sender": "did:dpki:0x51587De731f94b69d9f956d9C736EE5B0153a170",
+        "recipient": "did:dpki:0x6b3Ce64891c4D9c5C2E0072Ff682b1266497e448",
+        "message": "Message with details of notification"
+      },
+      "ReturnsOfMaterialsOK": {
+        "Discloser": "did:dpki:0x51587De731f94b69d9f956d9C736EE5B0153a170",
+        "Validation": "false" // default is false, change is Discloser Notify true
+      },
+      "ReturnsOfMaterialsFail": {
+        "Validation": "false" // default is false, change is true if after ten (10) dias, Discloser no send true to ReturnsMaterialsOK
+      },
+      "TermAfterFinishRelationship": {
+        "TimeStamp": "2025-01-01" // Indicate the time stamp where the period for which the information provided by the Discloser to the Recipient must be kept confidential.
+      }
     }
   },
-  ""
+  "jurisdiction": {
+    "Country": "(ISO Code Country) US",
+    "Region": "(ISO Code Country/Region) US-CA"
+    "Courts": {
+      "Court": "Distrito, Los Angeles"
+    },
+    "Arbitration": {
+      "Arbitration": "Eg. decentralized, PAID ADR"
+    },
+  },
+  "issuer": "did:dpki:0xB423DD4834Be284B53d317649465d100762b838d",
+  "issuanceDate": "2020-04-22T10:37:22Z",
+  "identifier": "83627465",
+  "name": "Non Disclosure Agreement",
+  "description": "PAID Smart Agreements",
   "proof": {
-    "type": "CLSignature2019",
-    "issuerData": "5NQ4TgzNfSQxoLzf2d5AV3JNiCdMaTgm...BXiX5UggB381QU7ZCgqWivUmy4D",
-    "attributes": "pPYmqDvwwWBDPNykXVrBtKdsJDeZUGFA...tTERiLqsZ5oxCoCSodPQaggkDJy",
-    "signature": "8eGWSiTiWtEA8WnBwX4T259STpxpRKuk...kpFnikqqSP3GMW7mVxC4chxFhVs",
-    "signatureCorrectnessProof": "SNQbW3u1QV5q89qhxA1xyVqFa6jCrKwv...dsRypyuGGK3RhhBUvH1tPEL8orH"
+    "type": "Ed25519Signature2018",
+    "created": "2020-04-22T10:37:22Z",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:example:456#key-1",
+    "jws": "eyJjcml0IjpbImI2NCJdLCJiNjQiOmZhbHNlLCJhbGciOiJFZERTQSJ9..BhWew0x-txcroGjgdtK-yBCqoetg9DD9SgV4245TmXJi-PmqFzux6Cwaph0r-mbqzlE17yLebjfqbRT275U1AA"
   }
 }}
 
@@ -100,15 +172,15 @@ Because smart agreements can contain numerous terms and conditions, a condition 
 
 Then you could send it to Smart Routing (`Smart Contract predefined according to the templates available and the courts or arbitration courts selected for its execution`):
 
-findDecisionFromAgreementFacts {
+`findDecisionFromAgreementFacts {`
 <br/>
 
-  smartAgreement, // as metadata oracleFacts <br/>
-  signed(hash [1,0]) // has Alice accept a penalty for late payment to Bob `[Alice, Bod]`, <br/>
-  PayOnTime() == false // from real time data sources = yes <br/>
-  ExecutePenalty(Alice) // anyExistingSignatures
+  `ReturnsOfMaterialsOK(validation)`, // method to execute <br/>
+  `signedByDiscloser()` // Signed a Meta Transactions has Discloser accept/reject to receive of information of the Recipient in 10 days or minus <br/>
+  `validation == false` // default value change of the state if the Discloser notify <br/>
+  `ReturnsOfMaterialsFail()` // Event enabled in true if ten (10) days after finish o reject relationship the Recipient don't returned all the information provided within the Non Disclosure Agreement
 <br/>
-}
+`}`
 
 Then, each decision-making contract, based on the pre-defined conditions in the Smart Agreements previously, according to the selected template.
 <br/>
@@ -121,13 +193,13 @@ Then, each decision-making contract, based on the pre-defined conditions in the 
 
 #### **Resolutions, courts and disputes**
 
-Each decision-making contract, depending on the template and the conditions set forth in them, to make resolutions, resolve disputes or the handling of imponderables that must be handled by hybrid or physical courts outside the scope of the contract but defined within it as a oracle to handle such disagreements between signature parties.
+Each decision-making contract, depending on the template and the conditions established therein, to make resolutions, resolve disputes or the handling of imponderables that must be processed by constituted courts, or an `Alternative Dispute Resolutions` (ADR) method, automated or semi -automated that allows quickly and decentralized to resolve disputes outside the scope of the contract but defined within it as an oracle to handle such disagreements between the signing parties.
 <br/>
 
-Additionally, Paid Smart Agreement, allows through Verifiable Credentials and executed the two-step authentication `Proof of Citizenship`, together with the preselected template at the time of establishing the contract between the parties, to validate and define as viable a jurisdiction for the resolution of controversies and / or disputes in the execution of said contract. Allowing that prior to the selection of the court or court to define for the handling of disputes, it can be verified that the signature parties have the legal quality to participate in said litigation, eg. such as nationality or legal residence in that region or country. , to which the selected court belongs.
+Additionally, Paid Smart Agreement, allows through Verifiable Credentials and to execute the authentication in two steps 'Proof of Citizenship', together with the pre-selected template at the time of establishing the contract between the parties, to validate and define as viable a jurisdiction for the resolution. of controversies and / or disputes in the execution of said contract. Allowing that prior to the selection of the court or ADR to be defined for the handling of disputes, it can be verified that the signing parties have the legal quality to participate in said litigation, eg. such as nationality or legal residence in that region or country, to which the selected court belongs or in the event of arbitration that is within the jurisdiction defined by this entity.
 <br/>
 
-Along with this PAID Smart Agreement proposed to offer a mapping or lookup system that allows offering signature parties, Courts or Arbitration Courts the most appropriate according to the type of pre-selected template and the result of the execution of the two-step verification. authentication `Proof of Citizenship`, facilitating its selection by users of the protocol <br/>
+Along with this PAID Smart Agreement proposed to offer a mapping or lookup system that allows offering signature parties, Courts or `Alternative Dispute Resolutions` (ADR) method the most appropriate according to the type of pre-selected template and the result of the execution of the two-step verification. authentication `Proof of Citizenship`, facilitating its selection by users of the protocol <br/>
 
 <!---  TODO 
 > - Ejemplo del Smart Router, given a DID method/service eg court service
@@ -152,4 +224,5 @@ By maintaining developer efficient processes, putting Proof of Identity and Proo
 - [DID Specification Registries](https://w3c.github.io/did-spec-registries/)
 - [Delaware Limited Liability Company](https://www.cscglobal.com/service/cls/delaware-llc-guide/)
 - [DID (Decentralized Identifier) Specification](https://github.com/WebOfTrustInfo/rwot3-sf/blob/master/topics-and-advance-readings/did-spec-working-draft-03.md)
+- [Alternative Dispute Resolution](https://en.wikipedia.org/wiki/Alternative_dispute_resolution)
 - [Ricardian contract](https://en.wikipedia.org/wiki/Ricardian_contract)
