@@ -5,31 +5,33 @@
 ### **Smart Agreements**
 
 #### **Attestations**
+
 An attestation is a proof issued by an attester or issuer, either human, smart contract or API.
 
-*The attestation model for PAID* uses W3C Verifiable Credentials Model with JSON Schemas packed as JWT. This allows us to use JWT basic features like aud, iss, nbf, exp and others sub
+_The attestation model for PAID_ uses W3C Verifiable Credentials Model with JSON Schemas packed as JWT. This allows us to use JWT basic features like aud, iss, nbf, exp and others sub
 
-- *aud*: Audience
-- *iss*: Issuer
-- *nbf*: Not Before
-- *exp*: Expiration
-- *sub*: Subject
+- _aud_: Audience
+- _iss_: Issuer
+- _nbf_: Not Before
+- _exp_: Expiration
+- _sub_: Subject
 
 Attestations must be single clause and composable. They are either part of VC or subset of VC Model, JSON Schemas converted to JWT using `did-jwt`, in order to provide a self-contained token that can be optionally signed using JSON Web Signature (JWS) and/or encrypted using JSON Web Encryption (JWE).
 
 #### **Components of Attestations**
- Proof issued by attesters (ie issuer attests a set of attributes or values, KYC like).
 
- - Full Legal Name.
- - Date and Place of Birth.
- - Country and Region (encoded under the ISO 3166 standard for storage in a Solidity Contract).
- - Rating (non-accredited, accredited, QIB, etc.varies by issuer & jurisdiction).
- - One or more public blockchain addresses a required renewal date.
+Proof issued by attesters (ie issuer attests a set of attributes or values, KYC like).
+
+- Full Legal Name.
+- Date and Place of Birth.
+- Country and Region (encoded under the ISO 3166 standard for storage in a Solidity Contract).
+- Rating (non-accredited, accredited, QIB, etc.varies by issuer & jurisdiction).
+- One or more public blockchain addresses a required renewal date.
 
 An example of a birth certificate clause might be eg Are you older than 18?, this attestation, because is a precondition, is attested off-chain with traditional APIs instead of using on-chain transactions. It means most of a Smart Agreement prerequisites will be proofs inside a Verifiable Credentials model. These proofs can also be used in conjunction Zero Knowledge technology.
 
-
 ## **Example of VC Model using Javascript**
+
 ```javascript
 {
   "@context": [
@@ -44,7 +46,7 @@ An example of a birth certificate clause might be eg Are you older than 18?, thi
     "id": "did:example:123",
     "type": [
       "NonDisclosureAgreement",
-      "Discloser",
+      "Discloser"
     ],
     "givenName": "JOHN",
     "familyName": "SMITH",
@@ -52,13 +54,13 @@ An example of a birth certificate clause might be eg Are you older than 18?, thi
     "Discloser": "did:dpki:0x51587De731f94b69d9f956d9C736EE5B0153a170",
     "residentSince": "2015-01-01",
     "birthCountry": "Bahamas",
-    "birthDate": "1958-08-17",
+    "birthDate": "1958-08-17"
   },
   "credentialSubjectB": {
     "id": "did:example:123",
     "type": [
       "NonDisclosureAgreement",
-      "Recipient",
+      "Recipient"
     ],
     "givenName": "MARIA",
     "familyName": "STARK",
@@ -89,8 +91,8 @@ An example of a birth certificate clause might be eg Are you older than 18?, thi
         "Discloser": "did:dpki:0x51587De731f94b69d9f956d9C736EE5B0153a170",
         "recipient": "did:dpki:0x6b3Ce64891c4D9c5C2E0072Ff682b1266497e448",
         "Message": "Detailed message indicating the rejection or termination of the relationship between the parties to the contract",
-      },
-    }
+      }
+    },
     "Function": {
       "Notification": {
         "sender": "did:dpki:0x51587De731f94b69d9f956d9C736EE5B0153a170",
@@ -102,7 +104,7 @@ An example of a birth certificate clause might be eg Are you older than 18?, thi
         "Validation": "false" // default is false, change is Discloser Notify true
       },
       "ReturnsOfMaterialsFail": {
-        "Validation": "false" // default is false, change is true if after ten (10) dias, Discloser no send true to ReturnsMaterialsOK
+        "Validation": "false" // default is false, change is true if after ten 10 dias, Discloser no send true to ReturnsMaterialsOK
       },
       "TermAfterFinishRelationship": {
         "TimeStamp": "2025-01-01" // Indicate the time stamp where the period for which the information provided by the Discloser to the Recipient must be kept confidential.
@@ -111,19 +113,19 @@ An example of a birth certificate clause might be eg Are you older than 18?, thi
   },
   "jurisdiction": {
     "Country": "(ISO Code Country) US",
-    "Region": "(ISO Code Country/Region) US-CA"
+    "Region": "(ISO Code Country/Region) US-CA",
     "Courts": {
       "Court": "Distrito, Los Angeles"
     },
     "Arbitration": {
       "Arbitration": {
         "identifier": "7465",
-        "name": "PAID ADR for Non Disclouser Agreements"
+        "name": "PAID ADR for Non Disclouser Agreements",
         "arbitratorA": "did:dpki:0xbda5F6Ff1dAe02b006837a8E656E9644707fcEA6",
         "arbitratorB": "did:dpki:0x566f23F6c4F82E5B02eA110C8E816915a1893e1E",
-        "arbitratorC": "did:dpki:0xf4D867BD19635f76196654Ef311375122aE0D5f1",
+        "arbitratorC": "did:dpki:0xf4D867BD19635f76196654Ef311375122aE0D5f1"
       }
-    },
+    }
   },
   "issuer": "did:dpki:0xB423DD4834Be284B53d317649465d100762b838d",
   "issuanceDate": "2020-04-22T10:37:22Z",
@@ -137,9 +139,10 @@ An example of a birth certificate clause might be eg Are you older than 18?, thi
     "verificationMethod": "did:example:456#key-1",
     "jws": "eyJjcml0IjpbImI2NCJdLCJiNjQiOmZhbHNlLCJhbGciOiJFZERTQSJ9..BhWew0x-txcroGjgdtK-yBCqoetg9DD9SgV4245TmXJi-PmqFzux6Cwaph0r-mbqzlE17yLebjfqbRT275U1AA"
   }
-}}
+}
 
 ```
+
 #### **Agreements**
 
 A Smart Agreements is build using the Verifiable Credentials, and contains:
@@ -181,15 +184,16 @@ Then you could send it to Smart Routing (`Smart Contract predefined according to
 `findDecisionFromAgreementFacts {`
 <br/>
 
-  `ReturnsOfMaterialsOK(validation)`, // method to execute <br/>
-  `signedByDiscloser()` // Signed a Meta Transactions has Discloser accept/reject to receive of information of the Recipient in 10 days or minus <br/>
-  `validation == false` // default value change of the state if the Discloser notify <br/>
-  `ReturnsOfMaterialsFail()` // Event enabled in true if ten (10) days after finish o reject relationship the Recipient don't returned all the information provided within the Non Disclosure Agreement
+`ReturnsOfMaterialsOK(validation)`, // method to execute <br/>
+`signedByDiscloser()` // Signed a Meta Transactions has Discloser accept/reject to receive of information of the Recipient in 10 days or minus <br/>
+`validation == false` // default value change of the state if the Discloser notify <br/>
+`ReturnsOfMaterialsFail()` // Event enabled in true if ten (10) days after finish o reject relationship the Recipient don't returned all the information provided within the Non Disclosure Agreement
 <br/>
 `}`
 
 Then, each decision-making contract, based on the pre-defined conditions in the Smart Agreements previously, according to the selected template.
 <br/>
+
 <!-- debe incluir
 - Prereq codificados basado en VC Model
 - did-dpki
@@ -207,18 +211,20 @@ Additionally, Paid Smart Agreement, allows through Verifiable Credentials and to
 
 Along with this PAID Smart Agreement proposed to offer a mapping or lookup system that allows offering signature parties, Courts or `Alternative Dispute Resolutions` (ADR) method the most appropriate according to the type of pre-selected template and the result of the execution of the two-step verification. authentication `Proof of Citizenship`, facilitating its selection by users of the protocol <br/>
 
-<!---  TODO 
+<!---  TODO
 > - Ejemplo del Smart Router, given a DID method/service eg court service
 > - Por ahora, Rules builtin en la plantilla con JEXL, estos rules, investiga max 4h y me reportas si podemos  mapearlo a RLP y/o EIP712
 > - Trabaja con Patricia, el schema final draft 0.1 --->
 
 ### **Summary**
+
 <br/>
 By maintaining developer efficient processes, putting Proof of Identity and Proof of Citizenship allows our PAID Smart Agreements Protocol, to have near identical set of requirements as those found in a KYC solution. At the same time, it doesn't disrupt the CA business, it expands the CA and digital signing for vendors. In future protocol upgrades, an incentivization model could be added to make eg a reputation scoring and voting system, to be able to have another layer of trust.
 <br/>
 <br/>
 
 ### **References**
+
 <br/>
 
 - [ISO 3166 COUNTRY CODES](https://www.iso.org/iso-3166-country-codes.html)
