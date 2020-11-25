@@ -1,15 +1,15 @@
- ## did-dpki
+ ## DID:PAID
 
  ### A did method to verify identity using Domain Verification with Certificate Authorities and Proof of Citizenship for Two-Factor validation
 
 
- ### Why did-dpki
+ ### Why did-paid
 
  PAID Smart Agreements need verifiable proof of identities to work well with legal contracts. Legal contracts, because they are binding, need a way to ensure all parties are accountable under a jurisdiction. In a simple legal agreement workflow, a KYC solution might be enough. But considering PAID is a decentralized based protocol, using smart contracts and oracles, we'll need a good set of technology stack that supports  enough data sources and still keep the level of decentralization required.
  
  ### Proposal
  
- `did-dpki` uses DID Method specification as standard to be able to integrate with other DID applications and services in the ecosystem. Based from ideas found in
+ `did-paid` uses DID Method specification as standard to be able to integrate with other DID applications and services in the ecosystem. Based from ideas found in
  `did-ethr`, we will have the following:
  
  - `delegate`: be able to delegate to another did user
@@ -18,12 +18,12 @@
  
  It must be resolvable, that is, be able to lookup and match by its public key.
  
- Additionally, did-dpki needs to have a decentralized KYC experience, it must be able to do:
+ Additionally, did-paid needs to have a decentralized KYC experience, it must be able to do:
  
  - `As a user, provision a signed well known (verifiable credentials) document based in a JSON Schema and publish it to IPFS / IPNS`
  - `As a user, approve or reject Certificate Authority keypair issuing`
- - `As a validator, validate did-dpki belongs to DNS Human Readable Link`
- - `As a validator, validate DNS Human Readable Link belongs to a did-dpki`
+ - `As a validator, validate did-paid belongs to DNS Human Readable Link`
+ - `As a validator, validate DNS Human Readable Link belongs to a did-paid`
 
  Ideally, but optional, provisioning must permit users to configure a custom `verified domain name` under paidnetwork or similar DNS name, similar to `domain.kreds`. Eg we could have a party sign a smart agreement with a domain name `alice-wonderland.paid.network` and the other party signing with `bob-realworld.paid.network`.
  

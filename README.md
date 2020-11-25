@@ -51,7 +51,7 @@ An example of a birth certificate clause might be eg Are you older than 18?, thi
     "givenName": "JOHN",
     "familyName": "SMITH",
     "gender": "Male",
-    "Discloser": "did:dpki:0x51587De731f94b69d9f956d9C736EE5B0153a170",
+    "Discloser": "did:paid:0x51587De731f94b69d9f956d9C736EE5B0153a170",
     "residentSince": "2015-01-01",
     "birthCountry": "Bahamas",
     "birthDate": "1958-08-17"
@@ -65,7 +65,7 @@ An example of a birth certificate clause might be eg Are you older than 18?, thi
     "givenName": "MARIA",
     "familyName": "STARK",
     "gender": "Female",
-    "recipient": "did:dpki:0x6b3Ce64891c4D9c5C2E0072Ff682b1266497e448",
+    "recipient": "did:paid:0x6b3Ce64891c4D9c5C2E0072Ff682b1266497e448",
     "residentSince": "2015-01-01",
     "birthCountry": "Panama",
     "birthDate": "1958-08-17",
@@ -73,34 +73,34 @@ An example of a birth certificate clause might be eg Are you older than 18?, thi
   "conditions": {
     "Events": {
       "Notices": {
-        "Discloser": "did:dpki:0x51587De731f94b69d9f956d9C736EE5B0153a170",
-        "recipient": "did:dpki:0x6b3Ce64891c4D9c5C2E0072Ff682b1266497e448",
+        "Discloser": "did:paid:0x51587De731f94b69d9f956d9C736EE5B0153a170",
+        "recipient": "did:paid:0x6b3Ce64891c4D9c5C2E0072Ff682b1266497e448",
         "Message": "Message with detail of the notification form to be made within the contract",
         },
       "ReturnOfMetarials": {
-        "Discloser": "did:dpki:0x51587De731f94b69d9f956d9C736EE5B0153a170",
-        "recipient": "did:dpki:0x6b3Ce64891c4D9c5C2E0072Ff682b1266497e448",
+        "Discloser": "did:paid:0x51587De731f94b69d9f956d9C736EE5B0153a170",
+        "recipient": "did:paid:0x6b3Ce64891c4D9c5C2E0072Ff682b1266497e448",
         "Message": "Message with detail of the deadline to returns of materials or documents that have been furnished by Discloser to Recipient, within ten (10) days after (a) the Relationship has been rejected or concluded",
       },
       "ReturnOfMetarialsFail": {
-        "Discloser": "did:dpki:0x51587De731f94b69d9f956d9C736EE5B0153a170",
-        "recipient": "did:dpki:0x6b3Ce64891c4D9c5C2E0072Ff682b1266497e448",
+        "Discloser": "did:paid:0x51587De731f94b69d9f956d9C736EE5B0153a170",
+        "recipient": "did:paid:0x6b3Ce64891c4D9c5C2E0072Ff682b1266497e448",
         "Message": "Message notify that ten (10) days after finished o rejected relationship the Recipient doesn't return all the information provided within the Non Disclosure Agreement",
       },
       "RejectOrFinishRelationship": {
-        "Discloser": "did:dpki:0x51587De731f94b69d9f956d9C736EE5B0153a170",
-        "recipient": "did:dpki:0x6b3Ce64891c4D9c5C2E0072Ff682b1266497e448",
+        "Discloser": "did:paid:0x51587De731f94b69d9f956d9C736EE5B0153a170",
+        "recipient": "did:paid:0x6b3Ce64891c4D9c5C2E0072Ff682b1266497e448",
         "Message": "Detailed message indicating the rejection or termination of the relationship between the parties to the contract",
       }
     },
     "Function": {
       "Notification": {
-        "sender": "did:dpki:0x51587De731f94b69d9f956d9C736EE5B0153a170",
-        "recipient": "did:dpki:0x6b3Ce64891c4D9c5C2E0072Ff682b1266497e448",
+        "sender": "did:paid:0x51587De731f94b69d9f956d9C736EE5B0153a170",
+        "recipient": "did:paid:0x6b3Ce64891c4D9c5C2E0072Ff682b1266497e448",
         "message": "Message with details of notification"
       },
       "ReturnsOfMaterialsOK": {
-        "Discloser": "did:dpki:0x51587De731f94b69d9f956d9C736EE5B0153a170",
+        "Discloser": "did:paid:0x51587De731f94b69d9f956d9C736EE5B0153a170",
         "Validation": "false" // default is false, change is Discloser Notify true
       },
       "ReturnsOfMaterialsFail": {
@@ -121,13 +121,13 @@ An example of a birth certificate clause might be eg Are you older than 18?, thi
       "Arbitration": {
         "identifier": "7465",
         "name": "PAID ADR for Non Disclouser Agreements",
-        "arbitratorA": "did:dpki:0xbda5F6Ff1dAe02b006837a8E656E9644707fcEA6",
-        "arbitratorB": "did:dpki:0x566f23F6c4F82E5B02eA110C8E816915a1893e1E",
-        "arbitratorC": "did:dpki:0xf4D867BD19635f76196654Ef311375122aE0D5f1"
+        "arbitratorA": "did:paid:0xbda5F6Ff1dAe02b006837a8E656E9644707fcEA6",
+        "arbitratorB": "did:paid:0x566f23F6c4F82E5B02eA110C8E816915a1893e1E",
+        "arbitratorC": "did:paid:0xf4D867BD19635f76196654Ef311375122aE0D5f1"
       }
     }
   },
-  "issuer": "did:dpki:0xB423DD4834Be284B53d317649465d100762b838d",
+  "issuer": "did:paid:0xB423DD4834Be284B53d317649465d100762b838d",
   "issuanceDate": "2020-04-22T10:37:22Z",
   "identifier": "83627465",
   "name": "Non Disclosure Agreement",
@@ -170,7 +170,7 @@ To make Solidity Smart Contract make decisiones using a rules engine like code, 
 Paid Smart Agreements allow an organization where the management of digital assets as a representation of entities and physical assets, allows carrying out agreements of a different nature where the verification of credentials of the signatories of the agreements is required. In addition to the attestation of the data indicated at the time of entering into said agreements and that allows verifying the legal jurisdiction of the signatories and validating it with that of the conclusion of the contract.
 <br/>
 
-Paid Smart Agreement, allows the verification of credentials through a Decentralized Digital Identity, based on the W3C standard, and a DID METHOD developed by PAID, as a standard identifier candidate within the experimental exercise that the W3C is doing together with the Web 3 Foundation, for the evolution of the entire Blockchain Ecosystem and the Management of Decentralized Identification Systems. The `did:dpki`, is a DID Method, inspired by `did:ether` and additionally works the native library of the W3C `did-jwt`, allowing the encoding and decoding with multiple algorithms such as JsonWebKey2020 or Ed25519VerificationKey2018.
+Paid Smart Agreement, allows the verification of credentials through a Decentralized Digital Identity, based on the W3C standard, and a DID METHOD developed by PAID, as a standard identifier candidate within the experimental exercise that the W3C is doing together with the Web 3 Foundation, for the evolution of the entire Blockchain Ecosystem and the Management of Decentralized Identification Systems. The `did:paid`, is a DID Method, inspired by `did:ether` and additionally works the native library of the W3C `did-jwt`, allowing the encoding and decoding with multiple algorithms such as JsonWebKey2020 or Ed25519VerificationKey2018.
 <br/>
 
 Additionally Paid Smart Agreement, allows the establishment of conditions and validation of events or calls for execution, through a standard technology for sending gas-less transactions (`EP-712`) to smart contracts and with a scheme that allows the conversion of the conditions of the conditions of the Physical Contract in a Pseudo Code (`JEXL`/`Java Expression Language`) understandable for the Smart Contract corresponding to the pre-established template at the time of creation, fulfilling the conditions of the Ricardian Contract.
@@ -196,7 +196,7 @@ Then, each decision-making contract, based on the pre-defined conditions in the 
 
 <!-- debe incluir
 - Prereq codificados basado en VC Model
-- did-dpki
+- did-paid
 - Condiciones y Reglas (esta JEXL based)
 - Cortes y Arbitrajes mapeados o lookup por medio de DID Services
 --->
