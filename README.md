@@ -216,6 +216,12 @@ Along with this PAID Smart Agreement proposed to offer a mapping or lookup syste
 > - Por ahora, Rules builtin en la plantilla con JEXL, estos rules, investiga max 4h y me reportas si podemos  mapearlo a RLP y/o EIP712
 > - Trabaja con Patricia, el schema final draft 0.1 --->
 
+--------------------------------------------
+
+## **Chapter 2 - Smart Agreements with DeFi, reputation, incentives to experts for a decentralized arbitration and Geolocated according to Proof of Citizenship, and Approach a Oracles**
+
+### **Smart Agreements**
+
 ### **Summary**
 
 <br/>
